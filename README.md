@@ -20,7 +20,7 @@ Scoped compatibility styles cover Calendar, Dataview, Tasks, Kanban, Admonition,
 
 ## Installation
 
-The community-directory submission is in progress. For manual installation, download `manifest.json` and `theme.css` from the latest GitHub Release, place them in `.obsidian/themes/Cyriform` inside your vault, then select **Cyriform** in **Settings → Appearance**. Both files belong in the same folder. The theme requires Obsidian 1.13.0 or later.
+Install from the [official Obsidian Community Directory](https://community.obsidian.md/themes/cyriform) by choosing **Add to Obsidian**. For manual installation, download `manifest.json` and `theme.css` from the latest GitHub Release, place them in `.obsidian/themes/Cyriform` inside your vault, then select **Cyriform** in **Settings → Appearance**. Both files belong in the same folder. The theme requires Obsidian 1.13.0 or later.
 
 Style Settings is optional. The theme includes its own defaults and embedded fonts. Install Style Settings through Obsidian’s community plugin interface to expose its full controls.
 

@@ -13,7 +13,7 @@ const fonts = [
   ['Cormorant Garamond', 'cormorant-garamond-600.ttf', '600', 'normal'],
   ['Cormorant Garamond', 'cormorant-garamond-italic-500.ttf', '500', 'italic'],
 ];
-let fontCSS = '/* Embedded typefaces retain their original SIL Open Font Licence. See licences/. */\n';
+let fontCSS = '/*\n' + read('LICENSE') + '\n*/\n/* Embedded typefaces retain their original SIL Open Font Licence. See licences/. */\n';
 for (const family of ['ebgaramond', 'beiruti', 'cormorantgaramond']) fontCSS += '/*\n' + read('licences/' + family + '-OFL.txt') + '\n*/\n';
 for (const [family, file, weight, style] of fonts) {
   const data = fs.readFileSync(path.join(root, 'src/fonts', file));

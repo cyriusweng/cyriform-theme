@@ -1,0 +1,1546 @@
+/* Cyriform 1.0.1 | Ground, Force and Variations | British English */
+body.theme-dark {
+  --cf-ground: var(--cyriform-ground, #07080A);
+  --cf-paper: var(--cyriform-paper, #0C0E13);
+  --cf-raised: #12151D;
+  --cf-hover: #1C2130;
+  --cf-ink: #E8E3D9;
+  --cf-bright: #FBF8F1;
+  --cf-muted: #A5A8B2;
+  --cf-faint: #9096A3;
+  --cf-rule: var(--cyriform-rule, #353B48);
+  --cf-accent: var(--cyriform-accent, #91ABFF);
+  --cf-gold: var(--cyriform-gold, #C6A56F);
+  --cf-oxblood: var(--cyriform-oxblood, #D695A7);
+  --cf-success: var(--cyriform-success, #92BBA4);
+  --cf-cobalt-pigment: #365ED8;
+  --cf-oxblood-pigment: #76273A;
+  --cf-gold-pigment: #A78555;
+  --cf-code: var(--cyriform-code-bg, #12151D);
+  --cf-selection: #283C69;
+  --cf-shadow: 0 8px 28px -10px #0009;
+  --cf-on-accent: #0C0E13;
+  --cf-info: #91ABFF;
+  --cf-tip: #9DBDBA;
+  --cf-highlight-ink: #F5DFBB;
+  --cf-highlight-bg: #514027;
+  --cf-search: #645126;
+}
+
+body.theme-light {
+  --cf-ground: var(--cyriform-ground, #E8E3D9);
+  --cf-paper: var(--cyriform-paper, #FBF8F1);
+  --cf-raised: #F0ECE3;
+  --cf-hover: #E4E0D7;
+  --cf-ink: #24262B;
+  --cf-bright: #14171C;
+  --cf-muted: #5E6068;
+  --cf-faint: #5E6068;
+  --cf-rule: var(--cyriform-rule, #C9C1B2);
+  --cf-accent: var(--cyriform-accent, #3156C9);
+  --cf-gold: var(--cyriform-gold, #795722);
+  --cf-oxblood: var(--cyriform-oxblood, #76273A);
+  --cf-success: var(--cyriform-success, #35644E);
+  --cf-cobalt-pigment: #365ED8;
+  --cf-oxblood-pigment: #76273A;
+  --cf-gold-pigment: #A78555;
+  --cf-code: var(--cyriform-code-bg, #EEE9DE);
+  --cf-selection: #DCE3F7;
+  --cf-shadow: 0 8px 28px -12px #31291E40;
+  --cf-on-accent: #FFFFFF;
+  --cf-info: #365ED8;
+  --cf-tip: #356966;
+  --cf-highlight-ink: #342B18;
+  --cf-highlight-bg: #F0D69D;
+  --cf-search: #F0D69D;
+}
+
+body {
+  --cf-read: var(--cyriform-font-reading, "EB Garamond", Georgia, serif);
+  --cf-display: var(--cyriform-font-heading, "Cormorant Garamond", Georgia, serif);
+  --cf-ui: var(--cyriform-font-interface, "Beiruti", system-ui, sans-serif);
+  --cf-mono: var(--cyriform-font-code, "IBM Plex Mono", "JetBrains Mono", Menlo, Consolas, monospace);
+  --cf-radius: var(--cyriform-radius, 3px);
+  --cf-border: var(--cyriform-border-width, 1px);
+  --cf-row: 30px;
+  --cf-speed: var(--cyriform-motion-duration, 160ms);
+  --font-text-theme: var(--cf-read);
+  --font-text: var(--cf-read);
+  --font-interface-theme: var(--cf-ui);
+  --font-interface: var(--cf-ui);
+  --font-monospace-theme: var(--cf-mono);
+  --font-monospace: var(--cf-mono);
+  --font-text-size: var(--cyriform-text-size, 19px);
+  --font-ui-medium: var(--cyriform-ui-size, 16px);
+  --font-ui-small: calc(var(--cyriform-ui-size, 16px) - 1px);
+  --font-ui-smaller: calc(var(--cyriform-ui-size, 16px) - 2px);
+  --line-height-normal: var(--cyriform-line-height, 1.65);
+  --line-height-tight: 1.35;
+  --background-primary: var(--cf-paper);
+  --background-primary-alt: var(--cf-raised);
+  --background-secondary: var(--cf-ground);
+  --background-secondary-alt: var(--cf-ground);
+  --background-modifier-hover: var(--cf-hover);
+  --background-modifier-active-hover: var(--cf-hover);
+  --background-modifier-border: var(--cf-rule);
+  --background-modifier-border-hover: var(--cf-muted);
+  --background-modifier-border-focus: var(--cf-accent);
+  --background-modifier-form-field: var(--cf-paper);
+  --background-modifier-message: var(--cf-raised);
+  --background-modifier-error: var(--cf-oxblood-pigment);
+  --background-modifier-success: var(--cf-success);
+  --text-normal: var(--cf-ink);
+  --text-muted: var(--cf-muted);
+  --text-faint: var(--cf-faint);
+  --text-accent: var(--cf-accent);
+  --text-accent-hover: var(--cf-accent);
+  --text-on-accent: var(--cf-on-accent);
+  --text-selection: var(--cf-selection);
+  --text-highlight-bg: var(--cf-highlight-bg);
+  --text-error: var(--cf-oxblood);
+  --text-success: var(--cf-success);
+  --text-warning: var(--cf-gold);
+  --interactive-normal: var(--cf-raised);
+  --interactive-hover: var(--cf-hover);
+  --interactive-accent: var(--cf-accent);
+  --interactive-accent-hover: var(--cf-accent);
+  --color-accent: var(--cf-accent);
+  --color-accent-1: var(--cf-accent);
+  --color-accent-2: var(--cf-accent);
+  --color-red: var(--cf-oxblood);
+  --color-orange: var(--cf-gold);
+  --color-yellow: var(--cf-gold);
+  --color-green: var(--cf-success);
+  --color-cyan: var(--cf-tip);
+  --color-blue: var(--cf-accent);
+  --color-purple: var(--cf-oxblood);
+  --radius-s: var(--cf-radius);
+  --radius-m: calc(var(--cf-radius) + 2px);
+  --radius-l: calc(var(--cf-radius) + 3px);
+  --input-radius: var(--cf-radius);
+  --button-radius: var(--cf-radius);
+  --file-line-width: var(--cyriform-measure, 70ch);
+  --file-margins: var(--cyriform-vertical-space, 36px) var(--cyriform-gutter, 36px);
+  --p-spacing: var(--cyriform-paragraph-gap, 1.1em);
+  --list-indent: var(--cyriform-indent, 2em);
+  --link-color: var(--cf-accent);
+  --link-color-hover: var(--cf-accent);
+  --link-external-color: var(--cf-accent);
+  --link-unresolved-color: var(--cf-muted);
+  --link-unresolved-opacity: 1;
+  --bold-color: var(--cf-bright);
+  --italic-color: var(--cf-ink);
+  --code-background: var(--cf-code);
+  --code-normal: var(--cf-gold);
+  --code-comment: var(--cf-faint);
+  --code-function: var(--cf-accent);
+  --code-keyword: var(--cf-oxblood);
+  --code-string: var(--cf-success);
+  --code-property: var(--cf-tip);
+  --code-value: var(--cf-gold);
+  --code-size: var(--cyriform-code-size, .82em);
+  --tag-color: var(--cf-muted);
+  --tag-color-hover: var(--cf-accent);
+  --tag-background: transparent;
+  --tag-background-hover: var(--cf-raised);
+  --tag-radius: var(--cf-radius);
+  --tag-padding-x: .3em;
+  --blockquote-border-color: var(--cf-gold);
+  --blockquote-border-thickness: 1px;
+  --blockquote-background: transparent;
+  --blockquote-color: var(--cf-muted);
+  --checkbox-color: var(--cf-accent);
+  --checkbox-color-hover: var(--cf-accent);
+  --checkbox-border-color: var(--cf-muted);
+  --checkbox-radius: 2px;
+  --checklist-done-color: var(--cf-muted);
+  --checklist-done-decoration: line-through;
+  --list-marker-color: var(--cf-gold);
+  --list-marker-color-hover: var(--cf-accent);
+  --table-border-color: var(--cf-rule);
+  --table-border-width: var(--cf-border);
+  --table-header-color: var(--cf-muted);
+  --table-header-background: var(--cf-raised);
+  --table-row-background-hover: var(--cf-hover);
+  --nav-item-color: var(--cf-muted);
+  --nav-item-color-active: var(--cf-bright);
+  --nav-item-color-hover: var(--cf-ink);
+  --nav-item-background-active: var(--cf-raised);
+  --nav-item-background-hover: var(--cf-hover);
+  --nav-item-padding: 5px 8px;
+  --nav-item-weight-active: 600;
+  --nav-indentation-guide-color: var(--cf-rule);
+  --tab-background-active: var(--cf-paper);
+  --tab-text-color: var(--cf-muted);
+  --tab-text-color-active: var(--cf-bright);
+  --tab-outline-color: var(--cf-rule);
+  --tab-radius-active: 0;
+  --tab-radius: 0;
+  --ribbon-background: var(--cf-ground);
+  --titlebar-background: var(--cf-ground);
+  --titlebar-background-focused: var(--cf-ground);
+  --status-bar-background: var(--cf-ground);
+  --status-bar-text-color: var(--cf-muted);
+  --status-bar-border-width: 1px 0 0 0;
+  --status-bar-radius: 0;
+  --status-bar-border-color: var(--cf-rule);
+  --icon-color: var(--cf-muted);
+  --icon-color-hover: var(--cf-bright);
+  --icon-color-active: var(--cf-accent);
+  --modal-background: var(--cf-paper);
+  --modal-border-color: var(--cf-rule);
+  --modal-radius: var(--radius-l);
+  --prompt-border-color: var(--cf-rule);
+  --prompt-background: var(--cf-paper);
+  --menu-background: var(--cf-raised);
+  --menu-border-color: var(--cf-rule);
+  --tooltip-background: var(--cf-bright);
+  --tooltip-color: var(--cf-paper);
+  --search-result-background: var(--cf-paper);
+  --search-result-file-matched-bg: var(--cf-search);
+  --graph-line: var(--cf-rule);
+  --graph-node: var(--cf-muted);
+  --graph-node-focused: var(--cf-accent);
+  --graph-node-tag: var(--cf-gold);
+  --graph-node-attachment: var(--cf-tip);
+  --graph-node-unresolved: var(--cf-faint);
+  --graph-text: var(--cf-ink);
+  --canvas-background: var(--cf-ground);
+  --canvas-dot-pattern: var(--cf-rule);
+  --canvas-color-1: var(--cf-oxblood);
+  --canvas-color-2: var(--cf-gold);
+  --canvas-color-3: var(--cf-gold);
+  --canvas-color-4: var(--cf-success);
+  --canvas-color-5: var(--cf-tip);
+  --canvas-color-6: var(--cf-accent);
+  --metadata-label-text-color: var(--cf-muted);
+  --metadata-input-text-color: var(--cf-ink);
+  --metadata-background: transparent;
+  --metadata-border-color: var(--cf-rule);
+  --metadata-border-radius: 0;
+  --metadata-property-radius: var(--cf-radius);
+  --metadata-property-background-hover: var(--cf-raised);
+  --embed-border-start: 1px solid var(--cf-rule);
+  --embed-padding: 12px 20px;
+  --inline-title-font: var(--cf-display);
+  --inline-title-size: 2.6em;
+  --inline-title-weight: 600;
+  --inline-title-color: var(--cf-bright);
+  --inline-title-line-height: 1.12;
+  --hr-color: var(--cf-rule);
+  --hr-thickness: 1px;
+  --indentation-guide-color: var(--cf-rule);
+  --indentation-guide-color-active: var(--cf-accent);
+}
+
+/* Atmospheric variations keep the reading plane and colour settings independent. */
+body.cyriform-home {
+  --cf-hover: #25211D;
+}
+
+body.theme-light.cyriform-home {
+  --cf-hover: #EAE1D2;
+}
+
+body.cyriform-becoming {
+  --tab-text-color-active: var(--cf-accent);
+  --nav-item-color-active: var(--cf-accent);
+}
+
+body.cyriform-intimacy {
+  --blockquote-border-color: var(--cf-oxblood);
+  --list-marker-color: var(--cf-oxblood);
+}
+
+body.cyriform-release {
+  --tab-text-color-active: var(--cf-accent);
+  --inline-title-color: var(--cf-accent);
+}
+
+body.cyriform-density-compact {
+  --cf-row: 25px;
+  --nav-item-padding: 3px 7px;
+}
+
+body.cyriform-density-spacious {
+  --cf-row: 38px;
+  --nav-item-padding: 8px 10px;
+}
+
+/* Typography belongs to both rendered prose and the CM6 editor. */
+.markdown-rendered,
+.markdown-source-view.mod-cm6 .cm-content {
+  font-family: var(--cf-read);
+  letter-spacing: var(--cyriform-tracking, 0em);
+}
+
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.HyperMD-header {
+  font-family: var(--cf-display);
+  line-height: 1.22;
+  letter-spacing: -.012em;
+  text-wrap: balance;
+}
+
+.inline-title {
+  padding-bottom: .45em;
+  border-bottom: 1px solid var(--cf-rule);
+  margin-bottom: .85em;
+}
+
+.markdown-rendered h1,
+.HyperMD-header-1 {
+  padding-bottom: .24em;
+  border-bottom: 1px solid var(--cf-rule);
+}
+
+.markdown-rendered h2,
+.HyperMD-header-2 {
+  padding-bottom: .18em;
+  border-bottom: 1px solid var(--cf-rule);
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2 {
+  margin-top: 1.55em;
+}
+
+body:not(.cyriform-rules-none):not(.cyriform-rules-fine) :is(.inline-title, .markdown-rendered h1) {
+  background-image: linear-gradient(90deg, var(--cf-cobalt-pigment) 0 56px, transparent 56px);
+  background-position: left bottom;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+}
+
+.cyriform-rules-none :is(.inline-title, .markdown-rendered h1, .markdown-rendered h2, .HyperMD-header-1, .HyperMD-header-2) {
+  border-bottom: 0;
+  background-image: none;
+}
+
+.cyriform-heading-labels .markdown-rendered :is(h1, h2, h3, h4, h5, h6)::before {
+  font: 500 .42em var(--cf-ui);
+  color: var(--cf-muted);
+  margin-inline-end: 1em;
+  letter-spacing: .08em;
+}
+
+.cyriform-heading-labels .HyperMD-header::before {
+  font: 500 .55em var(--cf-ui);
+  color: var(--cf-muted);
+  margin-inline-end: 1em;
+}
+
+.cyriform-emphasis-gold {
+  --bold-color: var(--cf-gold);
+}
+
+.cyriform-prose-indent .markdown-rendered p+p {
+  text-indent: 1.5em;
+}
+
+.markdown-rendered :is(code, pre),
+.cm-inline-code,
+.HyperMD-codeblock {
+  font-family: var(--cf-mono);
+  font-variant-ligatures: none;
+}
+
+.cyriform-ligatures :is(code, pre, .cm-inline-code, .HyperMD-codeblock) {
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+}
+
+.markdown-rendered pre {
+  border: 1px solid var(--cf-rule);
+  border-radius: var(--cf-radius);
+  padding: 1.2em;
+}
+
+.markdown-rendered pre code {
+  color: var(--cf-ink);
+  background: transparent;
+}
+
+.cyriform-wrap-code :is(.markdown-rendered pre, .markdown-rendered pre code) {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.cm-line.HyperMD-codeblock {
+  color: var(--cf-ink);
+}
+
+.markdown-rendered :is(blockquote, .footnotes) {
+  font-size: .96em;
+}
+
+.markdown-rendered blockquote {
+  margin-inline: 0;
+  padding: 0 1.2em;
+}
+
+.footnotes {
+  border-top: 1px solid var(--cf-rule);
+  margin-top: 2.5em;
+  color: var(--cf-muted);
+}
+
+.footnote-link,
+.cm-footref {
+  color: var(--cf-gold);
+  font-family: var(--cf-ui);
+}
+
+.markdown-rendered :is(kbd, samp) {
+  font-family: var(--cf-mono);
+  font-size: .8em;
+  border: 1px solid var(--cf-rule);
+  border-radius: 2px;
+  background: var(--cf-raised);
+  padding: .08em .3em;
+}
+
+.markdown-rendered a,
+.cm-hmd-internal-link,
+.cm-link {
+  text-underline-offset: .18em;
+  text-decoration-thickness: 1px;
+}
+
+.cyriform-links-on-hover .markdown-rendered a:not(:hover),
+.cyriform-links-on-hover .cm-hmd-internal-link {
+  text-decoration: none;
+}
+
+.cyriform-links-strong .markdown-rendered a {
+  text-decoration-thickness: 2px;
+}
+
+.markdown-rendered a.is-unresolved,
+.cm-hmd-internal-link.is-unresolved {
+  text-decoration: underline dashed;
+  color: var(--cf-muted);
+}
+
+.cyriform-unresolved-muted .markdown-rendered a.is-unresolved {
+  text-decoration: none;
+}
+
+.markdown-rendered a.tag,
+.cm-hashtag {
+  font-family: var(--cf-ui);
+  font-size: .84em;
+  letter-spacing: .015em;
+}
+
+.cyriform-tags-outline :is(a.tag, .cm-hashtag) {
+  border: 1px solid var(--cf-rule);
+}
+
+.cyriform-tags-semantic a.tag:is([href*="urgent"], [href*="blocked"], [href*="alert"]) {
+  color: var(--cf-oxblood);
+}
+
+.cyriform-tags-semantic a.tag:is([href*="done"], [href*="complete"], [href*="success"]) {
+  color: var(--cf-success);
+}
+
+.cyriform-tags-semantic a.tag:is([href*="reference"], [href*="important"], [href*="review"]) {
+  color: var(--cf-gold);
+}
+
+.cyriform-tags-semantic a.tag:is([href*="idea"], [href*="project"], [href*="index"]) {
+  color: var(--cf-accent);
+}
+
+.markdown-rendered mark,
+.cm-highlight {
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--cf-gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: .12em;
+}
+
+.cyriform-highlight-wash :is(.markdown-rendered mark, .cm-highlight) {
+  background: var(--cf-highlight-bg);
+  color: var(--cf-highlight-ink);
+  text-decoration: none;
+}
+
+.cyriform-highlight-solid :is(.markdown-rendered mark, .cm-highlight) {
+  background: var(--cf-gold);
+  color: var(--cf-paper);
+  text-decoration: none;
+}
+
+mark[class*="cyriform-mark-"] {
+  text-decoration-color: var(--cf-mark, var(--cf-gold));
+}
+
+mark.cyriform-mark-cobalt {
+  --cf-mark: var(--cf-accent);
+}
+
+mark.cyriform-mark-gold {
+  --cf-mark: var(--cf-gold);
+}
+
+mark.cyriform-mark-oxblood {
+  --cf-mark: var(--cf-oxblood);
+}
+
+mark.cyriform-mark-mineral {
+  --cf-mark: var(--cf-success);
+}
+
+mark.cyriform-mark-bone {
+  --cf-mark: var(--cf-muted);
+}
+
+.cyriform-highlight-solid mark[class*="cyriform-mark-"] {
+  background: var(--cf-mark, var(--cf-gold));
+}
+
+.markdown-rendered hr,
+.cm-line hr {
+  height: 1px;
+  border: 0;
+  background: var(--cf-rule);
+  margin-block: 2.2em;
+}
+
+body:not(.cyriform-divider-rule):not(.cyriform-divider-double) :is(.markdown-rendered hr, .cm-line hr) {
+  background: linear-gradient(90deg, var(--cf-gold) 0 36px, var(--cf-rule) 36px);
+}
+
+.cyriform-divider-double :is(.markdown-rendered hr, .cm-line hr) {
+  height: 4px;
+  border-block: 1px solid var(--cf-rule);
+  background: none;
+}
+
+.cyriform-markers-square .list-bullet::after {
+  border-radius: 0;
+}
+
+body:not(.cyriform-markers-round):not(.cyriform-markers-square) ul ul .list-bullet::after {
+  background: transparent;
+  border: 1px solid var(--cf-gold);
+}
+
+body:not(.cyriform-markers-round):not(.cyriform-markers-square) ul ul ul .list-bullet::after {
+  border-radius: 0;
+  background: var(--cf-gold);
+}
+
+.cyriform-list-guides .markdown-rendered :is(ul, ol) :is(ul, ol) {
+  border-inline-start: 1px solid var(--cf-rule);
+}
+
+.cyriform-list-guides {
+  --indentation-guide-width: 1px;
+}
+
+/* Callout types use Obsidian 1.13 colour values and retain native folding. */
+.callout {
+  --callout-color: var(--cf-accent);
+  border: 0;
+  border-top: 1px solid var(--callout-color);
+  border-radius: 0;
+  background: var(--cf-raised);
+  padding: 14px 18px;
+  box-shadow: none;
+}
+
+.callout-title {
+  font-family: var(--cf-ui);
+  font-weight: 600;
+  color: var(--callout-color);
+  gap: 8px;
+}
+
+.callout-icon {
+  color: var(--callout-color);
+}
+
+.callout-content {
+  color: var(--cf-ink);
+}
+
+.callout-content> :first-child {
+  margin-top: .5em;
+}
+
+.callout-content> :last-child {
+  margin-bottom: 0;
+}
+
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"],
+.callout[data-callout="reference"] {
+  --callout-color: var(--cf-gold);
+}
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"] {
+  --callout-color: var(--cf-tip);
+}
+
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --callout-color: var(--cf-success);
+}
+
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"],
+.callout[data-callout="important"],
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"] {
+  --callout-color: var(--cf-gold);
+}
+
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"],
+.callout[data-callout="bug"] {
+  --callout-color: var(--cf-oxblood);
+}
+
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  --callout-color: var(--cf-muted);
+}
+
+.callout[data-callout="example"],
+.callout[data-callout="experiment"] {
+  --callout-color: var(--cf-tip);
+}
+
+.cyriform-callout-outline .callout {
+  background: transparent;
+  border: 1px solid var(--callout-color);
+}
+
+.cyriform-callout-open .callout {
+  background: transparent;
+  padding-inline: 0;
+}
+
+@supports (background:color-mix(in srgb, red, blue)) {
+  .cyriform-callout-tinted .callout {
+    background: color-mix(in srgb, var(--callout-color) 9%, var(--cf-paper));
+  }
+
+  .cyriform-highlight-wash mark[class*="cyriform-mark-"] {
+    background: color-mix(in srgb, var(--cf-mark) 22%, var(--cf-paper));
+    color: var(--cf-ink);
+  }
+}
+
+/* Extended tasks preserve checkbox hit areas and native input semantics. */
+body:not(.cyriform-native-tasks) .task-list-item[data-task]>input.task-list-item-checkbox,
+body:not(.cyriform-native-tasks) .HyperMD-task-line[data-task] .task-list-item-checkbox {
+  border-radius: 2px;
+}
+
+body:not(.cyriform-native-tasks) :is(.task-list-item, .HyperMD-task-line)[data-task="/"] .task-list-item-checkbox {
+  background: linear-gradient(90deg, var(--cf-accent) 50%, var(--cf-paper) 50%);
+  border-color: var(--cf-accent);
+}
+
+body:not(.cyriform-native-tasks) :is(.task-list-item, .HyperMD-task-line)[data-task="/"] .task-list-item-checkbox::after {
+  display: none;
+}
+
+body:not(.cyriform-native-tasks) :is(.task-list-item, .HyperMD-task-line)[data-task]:not([data-task="x"]):not([data-task="X"]):not([data-task="-"]) {
+  --checklist-done-decoration: none;
+  --checklist-done-color: var(--cf-ink);
+  text-decoration: none;
+  color: var(--cf-ink);
+}
+
+body:not(.cyriform-native-tasks) :is(.task-list-item, .HyperMD-task-line)[data-task="-"] .task-list-item-checkbox {
+  background: var(--cf-raised);
+  border-color: var(--cf-muted);
+}
+
+body:not(.cyriform-native-tasks) :is(.task-list-item, .HyperMD-task-line)[data-task="-"] .task-list-item-checkbox::after {
+  mask: none;
+  -webkit-mask: none;
+  width: 8px;
+  height: 1px;
+  background: var(--cf-muted);
+  inset: 50% auto auto 3px;
+}
+
+/* Tables, native databases and properties use the same ledger geometry. */
+.markdown-rendered table,
+.dataview.table-view-table {
+  font-variant-numeric: tabular-nums;
+  border-collapse: collapse;
+}
+
+.markdown-rendered th {
+  font-family: var(--cf-ui);
+  font-weight: 600;
+  font-size: .9em;
+  letter-spacing: .02em;
+}
+
+.markdown-rendered :is(th, td) {
+  border-inline: 0;
+  padding: .55em .75em;
+  vertical-align: top;
+}
+
+.cyriform-table-stripes .markdown-rendered tbody tr:nth-child(even) {
+  background: var(--cf-raised);
+}
+
+.cyriform-table-grid .markdown-rendered :is(th, td) {
+  border: 1px solid var(--cf-rule);
+}
+
+.cyriform-table-wide .markdown-preview-sizer>.el-table {
+  max-width: 100%;
+  width: 100%;
+}
+
+.cyriform-table-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width: 100%;
+  width: 100%;
+}
+
+.cyriform-table-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>div:not(.el-table) {
+  max-width: var(--file-line-width);
+  margin-inline: auto;
+}
+
+.cyriform-table-wide .markdown-rendered table {
+  width: 100%;
+}
+
+.bases-view {
+  --bases-table-container-border-radius: var(--cf-radius);
+  --bases-cards-radius: var(--cf-radius);
+  --bases-table-header-background: var(--cf-raised);
+  --bases-table-border-color: var(--cf-rule);
+  --bases-table-cell-background-active: var(--cf-selection);
+  --bases-table-cell-shadow-focus: 0 0 0 2px var(--cf-accent);
+  --bases-cards-background: var(--cf-paper);
+  --bases-cards-cover-background: var(--cf-ground);
+}
+
+.bases-toolbar {
+  font-family: var(--cf-ui);
+  border-bottom: 1px solid var(--cf-rule);
+}
+
+.bases-table {
+  font-variant-numeric: tabular-nums;
+}
+
+.bases-table-header {
+  font-family: var(--cf-ui);
+  color: var(--cf-muted);
+}
+
+.bases-cards-item {
+  border: 1px solid var(--cf-rule);
+  border-radius: var(--cf-radius);
+  box-shadow: none;
+}
+
+.metadata-container {
+  border-block: 1px solid var(--cf-rule);
+  padding: 14px 0;
+  margin-block: 1.2em;
+  background: transparent;
+}
+
+.metadata-property {
+  min-height: var(--cf-row);
+}
+
+.metadata-property-key {
+  font-family: var(--cf-ui);
+  font-size: .9em;
+}
+
+.cyriform-properties-compact .metadata-container {
+  padding-block: 6px;
+}
+
+.cyriform-properties-compact .metadata-property {
+  min-height: 24px;
+}
+
+/* Spatial work preserves native positions, edge paths and canvas gestures. */
+.canvas-wrapper {
+  background: var(--cf-ground);
+}
+
+.canvas-node-container {
+  border-radius: var(--cf-radius);
+  border: 1px solid var(--canvas-color, var(--cf-rule));
+  box-shadow: var(--cf-shadow);
+}
+
+.canvas-node-group {
+  border: 1px dashed var(--canvas-color, var(--cf-muted));
+  border-radius: var(--cf-radius);
+}
+
+.canvas-node-label {
+  font-family: var(--cf-ui);
+  color: var(--cf-muted);
+}
+
+.canvas-node.is-focused .canvas-node-container {
+  outline: 2px solid var(--cf-accent);
+  outline-offset: 2px;
+}
+
+.canvas-controls-group {
+  border: 1px solid var(--cf-rule);
+  border-radius: var(--cf-radius);
+  background: var(--cf-raised);
+}
+
+.graph-controls {
+  border: 1px solid var(--cf-rule);
+  border-radius: var(--cf-radius);
+  background: var(--cf-paper);
+}
+
+/* Document states are explicit per-note classes. */
+:is(.markdown-preview-view, .markdown-source-view).cyriform-important {
+  box-shadow: inset 0 1px var(--cf-gold);
+}
+
+:is(.markdown-preview-view, .markdown-source-view).cyriform-alert {
+  box-shadow: inset 0 0 0 1px var(--cf-oxblood);
+}
+
+:is(.markdown-preview-view, .markdown-source-view).cyriform-draft {
+  --inline-title-color: var(--cf-muted);
+  --cf-note-state: var(--cf-muted);
+}
+
+:is(.markdown-preview-view, .markdown-source-view).cyriform-archived {
+  --cf-note-state: var(--cf-muted);
+  --inline-title-color: var(--cf-muted);
+}
+
+:is(.markdown-preview-view, .markdown-source-view).cyriform-pinned {
+  box-shadow: inset 0 2px var(--cf-accent);
+}
+
+.cyriform-draft .inline-title::after,
+.cyriform-archived .inline-title::after {
+  font: 500 .34em var(--cf-ui);
+  letter-spacing: .08em;
+  margin-inline-start: 1em;
+  color: var(--cf-note-state);
+}
+
+.cyriform-draft .inline-title::after {
+  content: "Draft";
+}
+
+.cyriform-archived .inline-title::after {
+  content: "Archived";
+}
+
+.cyriform-wide {
+  --file-line-width: 90ch;
+}
+
+.cyriform-narrow {
+  --file-line-width: 54ch;
+}
+
+.cyriform-full-width {
+  --file-line-width: 100%;
+}
+
+.cyriform-meeting .inline-title {
+  border-top: 1px solid var(--cf-rule);
+  padding-top: .3em;
+}
+
+.cyriform-daily {
+  --blockquote-border-color: var(--cf-gold);
+}
+
+.cyriform-daily .inline-title {
+  color: var(--cf-gold);
+}
+
+.cyriform-index .inline-title {
+  font-size: 3em;
+}
+
+.cyriform-project .inline-title {
+  border-bottom-color: var(--cf-accent);
+}
+
+.cyriform-accent-cobalt {
+  --cf-accent: #365ED8;
+}
+
+.theme-dark .cyriform-accent-cobalt {
+  --cf-accent: #91ABFF;
+}
+
+.cyriform-accent-gold {
+  --cf-accent: var(--cf-gold);
+}
+
+.cyriform-accent-oxblood {
+  --cf-accent: var(--cf-oxblood);
+}
+
+.cyriform-accent-mineral {
+  --cf-accent: var(--cf-success);
+}
+
+.cyriform-accent-bone {
+  --cf-accent: var(--cf-ink);
+}
+
+/* Media layout tokens apply to Markdown and wikilink image embeds. */
+.markdown-rendered img,
+.markdown-source-view .image-embed img {
+  max-width: var(--cyriform-image-width, 100%);
+  height: auto;
+  border-radius: var(--cyriform-image-radius, 2px);
+}
+
+.cyriform-image-shadow :is(.markdown-rendered img, .image-embed img) {
+  box-shadow: var(--cf-shadow);
+}
+
+img[alt*="cyriform-banner"],
+.image-embed[alt*="cyriform-banner"] img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: var(--cyriform-banner-height, 260px);
+  object-fit: cover;
+}
+
+img[alt*="cyriform-left"]:not(.image-embed img),
+.image-embed[alt*="cyriform-left"] {
+  float: left;
+  max-width: 45%;
+  margin: 0 1em .6em 0;
+}
+
+img[alt*="cyriform-right"]:not(.image-embed img),
+.image-embed[alt*="cyriform-right"] {
+  float: right;
+  max-width: 45%;
+  margin: 0 0 .6em 1em;
+}
+
+.theme-dark img[alt*="cyriform-invert"],
+.theme-dark .image-embed[alt*="cyriform-invert"] img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+img[alt*="cyriform-grid"]:not(.image-embed img),
+.image-embed[alt*="cyriform-grid"] {
+  display: inline-block;
+  width: calc(50% - 8px);
+  margin: 4px;
+  vertical-align: top;
+}
+
+.image-embed[alt*="cyriform-grid"] img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.markdown-embed-content {
+  max-height: var(--cyriform-embed-height, 600px);
+  overflow: auto;
+}
+
+.markdown-embed {
+  border: 1px solid var(--cf-rule);
+  border-radius: var(--cf-radius);
+}
+
+.cyriform-embed-open .markdown-embed {
+  border: 0;
+  border-block: 1px solid var(--cf-rule);
+  border-radius: 0;
+}
+
+.internal-embed.mod-error {
+  border: 1px dashed var(--cf-oxblood);
+  padding: 1em;
+  color: var(--cf-muted);
+}
+
+.cyriform-diagram-scroll :is(.mermaid, .math-block) {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Workspace: ruled tabs, measured navigation and responsive controls. */
+.workspace-tab-header.is-active {
+  box-shadow: inset 0 -2px var(--cf-accent);
+}
+
+.workspace-tab-header-inner-title {
+  font-family: var(--cf-ui);
+}
+
+.nav-file-title,
+.nav-folder-title {
+  min-height: var(--cf-row);
+  border-radius: var(--cf-radius);
+}
+
+.nav-file-title.is-active {
+  box-shadow: inset 1px 0 var(--cf-accent);
+}
+
+.cyriform-tree-guides .nav-folder-children {
+  border-inline-start: 1px solid var(--cf-rule);
+}
+
+.cyriform-folders-depth .nav-folder>.nav-folder-title {
+  color: var(--cf-gold);
+}
+
+.cyriform-folders-depth .nav-folder .nav-folder>.nav-folder-title {
+  color: var(--cf-accent);
+}
+
+.cyriform-folders-depth .nav-folder .nav-folder .nav-folder>.nav-folder-title {
+  color: var(--cf-muted);
+}
+
+.cyriform-folders-semantic .nav-folder-title[data-path*="Archive"] {
+  color: var(--cf-muted);
+}
+
+.cyriform-folders-semantic .nav-folder-title[data-path*="Project"] {
+  color: var(--cf-accent);
+}
+
+.cyriform-folders-semantic .nav-folder-title[data-path*="Reference"] {
+  color: var(--cf-gold);
+}
+
+.cyriform-pane-lines .workspace-leaf {
+  outline: var(--cf-border) solid var(--cf-rule);
+  outline-offset: -1px;
+}
+
+.workspace-split.mod-root {
+  background: var(--cf-ground);
+}
+
+.view-header {
+  border-bottom: var(--cf-border) solid var(--cf-rule);
+}
+
+.menu,
+.suggestion-container,
+.popover,
+.prompt {
+  box-shadow: var(--cf-shadow);
+  border: 1px solid var(--cf-rule);
+}
+
+.suggestion-item.is-selected,
+.menu-item.selected {
+  background: var(--cf-hover);
+  color: var(--cf-ink);
+  box-shadow: inset 1px 0 var(--cf-accent);
+}
+
+.setting-item {
+  border-top-color: var(--cf-rule);
+  padding-block: 16px;
+}
+
+.setting-item-description {
+  color: var(--cf-muted);
+  line-height: 1.45;
+}
+
+button.mod-cta {
+  box-shadow: none;
+  font-weight: 600;
+}
+
+button:disabled,
+input:disabled,
+select:disabled {
+  opacity: .62;
+  cursor: default;
+}
+
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--cf-accent);
+  outline-offset: 3px;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  border-color: var(--cf-accent);
+  box-shadow: 0 0 0 1px var(--cf-accent);
+}
+
+.notice {
+  border: 1px solid var(--cf-rule);
+  background: var(--cf-raised);
+  color: var(--cf-ink);
+  box-shadow: var(--cf-shadow);
+}
+
+.empty-state-title {
+  font-family: var(--cf-display);
+  color: var(--cf-bright);
+}
+
+.empty-state-action {
+  color: var(--cf-accent);
+}
+
+::-webkit-scrollbar {
+  width: var(--cyriform-scrollbar, 8px);
+  height: var(--cyriform-scrollbar, 8px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cf-rule);
+  border: 2px solid var(--cf-paper);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cf-muted);
+}
+
+.cyriform-active-line .cm-active {
+  background: var(--cf-raised);
+}
+
+.cyriform-focus-mode .cm-line {
+  color: var(--cf-muted);
+}
+
+.cyriform-focus-mode .cm-active {
+  color: var(--cf-ink);
+  background: var(--cf-raised);
+}
+
+.cyriform-texture-ruled :is(.markdown-preview-view, .cm-scroller) {
+  background-image: linear-gradient(transparent calc(100% - 1px), var(--cf-rule) 1px);
+  background-size: 100% 2.6em;
+}
+
+.cyriform-texture-dots :is(.markdown-preview-view, .cm-scroller) {
+  background-image: radial-gradient(var(--cf-rule) .6px, transparent .6px);
+  background-size: 20px 20px;
+}
+
+@supports (backdrop-filter:blur(8px)) {
+  .cyriform-surface-translucent :is(.menu, .suggestion-container, .popover) {
+    background: color-mix(in srgb, var(--cf-raised) 94%, transparent);
+    backdrop-filter: blur(8px);
+  }
+}
+
+/* Community integrations use stable public CSS interfaces. */
+#calendar-container {
+  --color-background-heading: var(--cf-raised);
+  --color-background-day: transparent;
+  --color-background-weeknum: var(--cf-ground);
+  --color-text-title: var(--cf-ink);
+  --color-text-heading: var(--cf-muted);
+  --color-text-day: var(--cf-ink);
+  --color-text-today: var(--cf-accent);
+  --color-dot: var(--cf-gold);
+  --color-arrow: var(--cf-muted);
+  font-family: var(--cf-ui);
+}
+
+#calendar-container .today {
+  font-weight: 700;
+  outline: 1px solid var(--cf-accent);
+  outline-offset: -1px;
+}
+
+.dataview.inline-field {
+  border-radius: var(--cf-radius);
+  background: var(--cf-raised);
+}
+
+.dataview.inline-field-key {
+  font-family: var(--cf-ui);
+  color: var(--cf-muted);
+  background: var(--cf-ground);
+}
+
+.dataview.inline-field-value {
+  color: var(--cf-ink);
+  background: var(--cf-raised);
+}
+
+.tasks-layout-short-mode,
+.tasks-query-result {
+  color: var(--cf-ink);
+}
+
+.tasks-backlink,
+.tasks-edit,
+.tasks-count {
+  color: var(--cf-muted);
+  font-family: var(--cf-ui);
+}
+
+.kanban-plugin {
+  --kanban-background: var(--cf-ground);
+  --kanban-border: var(--cf-rule);
+}
+
+.kanban-plugin__lane {
+  background: var(--cf-raised);
+  border: 1px solid var(--cf-rule);
+  border-radius: var(--cf-radius);
+}
+
+.kanban-plugin__item {
+  background: var(--cf-paper);
+  border: 1px solid var(--cf-rule);
+  border-radius: var(--cf-radius);
+}
+
+.kanban-plugin__lane-title {
+  font-family: var(--cf-ui);
+  font-weight: 600;
+}
+
+.admonition {
+  border-radius: var(--cf-radius);
+  box-shadow: none;
+  background: var(--cf-raised);
+}
+
+.admonition-title {
+  font-family: var(--cf-ui);
+}
+
+.timeline-container .timeline-item {
+  border-color: var(--cf-rule);
+}
+
+.timeline-container .timeline-item-title {
+  font-family: var(--cf-display);
+  color: var(--cf-bright);
+}
+
+.timeline-container .timeline-item-content {
+  background: var(--cf-raised);
+  color: var(--cf-ink);
+}
+
+#editingToolbarModalBar,
+.editingToolbarPopoverBar {
+  --editing-toolbar-background-color: var(--cf-raised);
+  --editing-toolbar-icon-color: var(--cf-muted);
+  border: 1px solid var(--cf-rule);
+  border-radius: var(--cf-radius);
+  box-shadow: var(--cf-shadow);
+}
+
+#editingToolbarModalBar button {
+  color: var(--cf-muted);
+}
+
+#better-export-pdf,
+.mpdf-modal {
+  --background-primary: var(--cf-paper);
+  --background-secondary: var(--cf-ground);
+  --text-normal: var(--cf-ink);
+  --text-muted: var(--cf-muted);
+  --background-modifier-border: var(--cf-rule);
+}
+
+#better-export-pdf .setting-wrapper,
+.mpdf-modal .mpdf-select,
+.mpdf-modal .mpdf-custom-size-input,
+.mpdf-modal .mpdf-btn {
+  background: var(--cf-raised);
+  color: var(--cf-ink);
+  border-color: var(--cf-rule);
+}
+
+.timeline-view--timeline {
+  --timeline-view--item-color: var(--cf-gold);
+  --timeline-view--selected-item-color: var(--cf-accent);
+  --canvas-background: var(--cf-ground);
+}
+
+.workspace-leaf-content[data-type="excel-view"] {
+  --sheet-toolbar-background-color: var(--cf-raised);
+  --sheet-tab-bar-background-color: var(--cf-ground);
+  --sheet-grid-line-color: var(--cf-rule);
+}
+
+.Preview__Recompile {
+  background: var(--cf-raised);
+  color: var(--cf-ink);
+}
+
+/* A single settling motion for transient surfaces. */
+@keyframes cyriform-settle {
+  from {
+    transform: translateY(3px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+body:not(.cyriform-motion-still) :is(.prompt, .menu, .cyriform-picker) {
+  animation: cyriform-settle var(--cf-speed) cubic-bezier(.16, 1, .3, 1);
+}
+
+.cyriform-motion-still {
+  --cf-speed: 0ms;
+}
+
+.is-mobile {
+  --file-margins: 20px 20px;
+  --inline-title-size: 2.2em;
+}
+
+.is-mobile :is(button, .clickable-icon, .setting-item-control input, .setting-item-control select, .menu-item) {
+  min-height: var(--cyriform-touch-size, 44px);
+}
+
+.is-mobile.cyriform-mobile-dense {
+  --file-margins: 16px 14px;
+}
+
+.is-mobile.cyriform-mobile-ribbon .workspace-ribbon {
+  display: flex;
+  visibility: visible;
+}
+
+.is-mobile .metadata-property {
+  min-height: 36px;
+}
+
+@media (max-width:600px) {
+  body {
+    --file-margins: 20px 20px;
+    --inline-title-size: 2.2em;
+  }
+
+  .setting-item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .setting-item-control {
+    max-width: 100%;
+  }
+
+  .setting-item-control input[type="text"] {
+    max-width: 100%;
+  }
+
+  .markdown-rendered table {
+    font-size: .92em;
+  }
+
+  img[alt*="cyriform-left"],
+  img[alt*="cyriform-right"],
+  .image-embed[alt*="cyriform-left"],
+  .image-embed[alt*="cyriform-right"] {
+    float: none;
+    max-width: 100%;
+    margin: .7em 0;
+  }
+
+  .markdown-rendered pre {
+    padding: .8em;
+  }
+
+  .cyriform-index .inline-title {
+    font-size: 2.3em;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  body {
+    --cf-speed: 0ms;
+    scroll-behavior: auto;
+  }
+
+  body:not(.cyriform-motion-still) :is(.prompt, .menu, .cyriform-picker),
+  body :is(.prompt, .menu, .cyriform-picker) {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-transparency:reduce) {
+  .cyriform-surface-translucent :is(.menu, .suggestion-container, .popover) {
+    background: var(--cf-raised);
+    backdrop-filter: none;
+  }
+}
+
+@media (forced-colors:active) {
+  :where(button, a, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid Highlight;
+  }
+
+  .callout {
+    border: 1px solid CanvasText;
+  }
+
+  .workspace-tab-header.is-active {
+    border-bottom: 2px solid Highlight;
+  }
+}
+
+/* Print exports use white paper by default; isolated PDF renderers own their page backgrounds. */
+@media print {
+  body:not(.cyriform-print-dark) {
+    --cf-ground: #fff;
+    --cf-paper: #fff;
+    --cf-raised: #fff;
+    --cf-code: #F3F3F3;
+    --cf-ink: #202124;
+    --cf-bright: #111;
+    --cf-muted: #555;
+    --cf-faint: #555;
+    --cf-rule: #BBB;
+    --cf-accent: #294BAD;
+    --cf-gold: #70521D;
+    --cf-oxblood: #76273A;
+    --cf-success: #35644E;
+    --cf-tip: #356966;
+    --background-primary: #fff;
+    --background-secondary: #fff;
+    --text-normal: #202124;
+    --text-muted: #555;
+    --h1-color: #202124;
+    --h2-color: #202124;
+    --h3-color: #202124;
+    --h4-color: #202124;
+    --h5-color: #202124;
+    --h6-color: #202124;
+    --inline-title-color: #111;
+    background: #fff !important;
+    color: #202124 !important;
+  }
+
+  body:not(.cyriform-print-dark) :is(.print, .markdown-rendered, .markdown-preview-view, .markdown-preview-sizer, .markdown-preview-section) {
+    background: #fff !important;
+    color: #202124;
+  }
+
+  body:not(.cyriform-print-dark) .cyriform-accent-cobalt {
+    --cf-accent: #294BAD;
+  }
+
+  .markdown-rendered {
+    font-family: var(--cf-read);
+    font-size: var(--cyriform-print-size, 12pt);
+    letter-spacing: 0;
+  }
+
+  .cyriform-print-sans .markdown-rendered {
+    font-family: var(--cf-ui);
+  }
+
+  .cyriform-print-mono .markdown-rendered {
+    font-family: var(--cf-mono);
+  }
+
+  .cyriform-print-justified .markdown-rendered p {
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .cyriform-print-left .markdown-rendered p {
+    text-align: left;
+  }
+
+  .cyriform-print-links a.external-link::after {
+    content: " (" attr(href) ")";
+    font-size: .8em;
+    overflow-wrap: anywhere;
+  }
+
+  .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    break-after: avoid;
+    background-image: none;
+  }
+
+  .markdown-rendered :is(p, li) {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-rendered :is(img, pre, blockquote, .callout) {
+    break-inside: avoid;
+  }
+
+  .markdown-rendered pre {
+    white-space: pre-wrap;
+  }
+
+  .markdown-rendered .callout {
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid var(--cf-rule);
+  }
+
+  .markdown-rendered img {
+    box-shadow: none;
+    filter: none;
+  }
+
+  .markdown-rendered,
+  .markdown-rendered * {
+    animation: none !important;
+    transition: none !important;
+    text-shadow: none !important;
+  }
+
+  .cyriform-toolbar {
+    display: none !important;
+  }
+
+  .hr-for-pagination hr {
+    break-after: page;
+    visibility: hidden;
+  }
+}

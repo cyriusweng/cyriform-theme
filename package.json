@@ -1,0 +1,17 @@
+{
+  "name": "cyriform-theme",
+  "version": "1.0.1",
+  "description": "Cyriform for Obsidian",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node tests/check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyriusweng/cyriform-theme.git"
+  }
+}

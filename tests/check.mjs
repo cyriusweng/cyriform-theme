@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const root = new URL('../', import.meta.url);
+const read = name => fs.readFileSync(new URL(name, root), 'utf8');
+const schema = JSON.parse(read('src/settings.json'));
+const css = read('theme.css');
+const manifest = JSON.parse(read('manifest.json'));
+assert.equal(manifest.name, 'Cyriform');
+assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
+assert.equal(manifest.minAppVersion, '1.13.0');
+assert.equal(schema.settings.filter(s => s.type !== 'heading').length, 89);
+assert.equal(new Set(schema.settings.map(s => s.id)).size, schema.settings.length);
+const embedded = JSON.parse(css.match(/\/\* @settings\nname: Cyriform\nid: cyriform\nsettings: ([\s\S]*?)\n\*\//)[1]);
+assert.deepEqual(embedded, schema.settings);
+for (const setting of schema.settings) {
+  assert.ok(setting.title);
+  if (setting.type.startsWith('variable-')) assert.ok(css.includes('var(--' + setting.id + ','), setting.id);
+  if (setting.type === 'class-toggle') assert.ok(css.includes('.' + setting.id), setting.id);
+  if (setting.type === 'class-select') for (const option of setting.options.filter(o => o.value !== setting.default)) assert.ok(css.includes('.' + option.value), option.value);
+}
+for (const role of ['reading', 'heading', 'interface', 'code']) assert.ok(schema.settings.find(s => s.id === 'cyriform-font-' + role));
+assert.equal((css.match(/@font-face/g) || []).length, 6);
+assert.equal(/@import|url\(["']?https?:/i.test(css), false);
+assert.ok(css.includes('prefers-reduced-motion'));
+assert.ok(css.includes('prefers-reduced-transparency'));
+assert.ok(css.includes('@media print'));
+assert.ok(css.includes('SIL OPEN FONT LICENSE'));
+assert.ok(read('LICENSE').startsWith('MIT License'));
+assert.equal(/[\u3400-\u9fff]/u.test(JSON.stringify(schema)), false);
+for (const name of ['screenshot.png', 'screenshots/dark.png', 'screenshots/light.png']) assert.ok(fs.statSync(new URL(name, root)).size > 1000, name);
+console.log('PASS manifest, 89 settings, six embedded font faces, local assets, licence notices, accessibility hooks and screenshots.');

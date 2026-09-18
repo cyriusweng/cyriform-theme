@@ -1,0 +1,1110 @@
+{
+  "name": "Cyriform",
+  "id": "cyriform",
+  "settings": [
+    {
+      "id": "cyriform-section-identity",
+      "title": "Identity and colour",
+      "type": "heading",
+      "level": 1,
+      "collapsed": true
+    },
+    {
+      "id": "cyriform-state",
+      "title": "Atmosphere",
+      "description": "Choose a variation of Ground, Force and Variations. Each state retains the same structure and semantic roles.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-clarity",
+      "options": [
+        {
+          "label": "Clarity",
+          "value": "cyriform-clarity"
+        },
+        {
+          "label": "Home",
+          "value": "cyriform-home"
+        },
+        {
+          "label": "Becoming",
+          "value": "cyriform-becoming"
+        },
+        {
+          "label": "Intimacy",
+          "value": "cyriform-intimacy"
+        },
+        {
+          "label": "Release",
+          "value": "cyriform-release"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-accent",
+      "title": "Interaction colour",
+      "description": "Links, focus and selected controls.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#3156C9",
+      "default-dark": "#91ABFF"
+    },
+    {
+      "id": "cyriform-gold",
+      "title": "Knowledge colour",
+      "description": "Highlights, references and marked knowledge.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#795722",
+      "default-dark": "#C6A56F"
+    },
+    {
+      "id": "cyriform-oxblood",
+      "title": "Attention colour",
+      "description": "Critical states and editorial counterforce.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#76273A",
+      "default-dark": "#D695A7"
+    },
+    {
+      "id": "cyriform-success",
+      "title": "Completion colour",
+      "description": "Completed work and positive semantic states.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#35644E",
+      "default-dark": "#92BBA4"
+    },
+    {
+      "id": "cyriform-paper",
+      "title": "Reading surface",
+      "description": "The document plane behind prose.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#FBF8F1",
+      "default-dark": "#0C0E13"
+    },
+    {
+      "id": "cyriform-ground",
+      "title": "Workspace ground",
+      "description": "Sidebars, ribbon and the surrounding workspace.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#E8E3D9",
+      "default-dark": "#07080A"
+    },
+    {
+      "id": "cyriform-code-bg",
+      "title": "Code surface",
+      "description": "The background of inline and fenced code.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#EEE9DE",
+      "default-dark": "#12151D"
+    },
+    {
+      "id": "cyriform-rule",
+      "title": "Structural line",
+      "description": "Fine rules separating related surfaces.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#C9C1B2",
+      "default-dark": "#353B48"
+    },
+    {
+      "id": "cyriform-section-type",
+      "title": "Typography",
+      "type": "heading",
+      "level": 1,
+      "collapsed": true
+    },
+    {
+      "id": "cyriform-font-reading",
+      "title": "Reading font",
+      "description": "Default: EB Garamond. Enter a CSS font-family stack.",
+      "type": "variable-text",
+      "default": "\"EB Garamond\", Georgia, serif"
+    },
+    {
+      "id": "cyriform-font-heading",
+      "title": "Heading font",
+      "description": "Default: Cormorant Garamond. Applies to titles and headings.",
+      "type": "variable-text",
+      "default": "\"Cormorant Garamond\", Georgia, serif"
+    },
+    {
+      "id": "cyriform-font-interface",
+      "title": "Interface font",
+      "description": "Default: Beiruti. Applies to navigation and controls.",
+      "type": "variable-text",
+      "default": "\"Beiruti\", system-ui, sans-serif"
+    },
+    {
+      "id": "cyriform-font-code",
+      "title": "Code font",
+      "description": "Default: IBM Plex Mono, with local monospace fallbacks.",
+      "type": "variable-text",
+      "default": "\"IBM Plex Mono\", \"JetBrains Mono\", Menlo, Consolas, monospace"
+    },
+    {
+      "id": "cyriform-text-size",
+      "title": "Reading size",
+      "description": "Base reading and editing text size.",
+      "type": "variable-number-slider",
+      "default": 19,
+      "min": 14,
+      "max": 26,
+      "step": 1,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-ui-size",
+      "title": "Interface size",
+      "description": "Navigation and control text size.",
+      "type": "variable-number-slider",
+      "default": 16,
+      "min": 13,
+      "max": 21,
+      "step": 1,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-line-height",
+      "title": "Reading line height",
+      "description": "Space between lines of prose.",
+      "type": "variable-number-slider",
+      "default": 1.65,
+      "min": 1.3,
+      "max": 2.2,
+      "step": 0.05
+    },
+    {
+      "id": "cyriform-tracking",
+      "title": "Reading letter spacing",
+      "description": "Fine tracking adjustment for the reading font.",
+      "type": "variable-number-slider",
+      "default": 0,
+      "min": -0.02,
+      "max": 0.06,
+      "step": 0.005,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-code-size",
+      "title": "Code size",
+      "description": "Code size relative to prose.",
+      "type": "variable-number-slider",
+      "default": 0.82,
+      "min": 0.7,
+      "max": 1.1,
+      "step": 0.01,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-paragraph-gap",
+      "title": "Paragraph spacing",
+      "description": "Space after each prose paragraph.",
+      "type": "variable-number-slider",
+      "default": 1.1,
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-ligatures",
+      "title": "Code ligatures",
+      "description": "Enable contextual and discretionary ligatures supported by the chosen code font.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-prose-indent",
+      "title": "First-line paragraph indent",
+      "description": "Indent ordinary paragraphs in Reading view; opening paragraphs stay aligned.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-emphasis",
+      "title": "Emphasis treatment",
+      "description": "Use typographic weight or add the knowledge colour to strong text.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-emphasis-ink",
+      "options": [
+        {
+          "label": "Ink and weight",
+          "value": "cyriform-emphasis-ink"
+        },
+        {
+          "label": "Gold emphasis",
+          "value": "cyriform-emphasis-gold"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-section-headings",
+      "title": "Heading hierarchy",
+      "type": "heading",
+      "level": 1,
+      "collapsed": true
+    },
+    {
+      "id": "cyriform-heading-colour",
+      "title": "Heading colour system",
+      "description": "Preserve the editorial hierarchy or choose a deliberate colour treatment.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-headings-ink",
+      "options": [
+        {
+          "label": "Bone and ink",
+          "value": "cyriform-headings-ink"
+        },
+        {
+          "label": "Interaction accent",
+          "value": "cyriform-headings-accent"
+        },
+        {
+          "label": "Custom by level",
+          "value": "cyriform-headings-custom"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-heading-rule",
+      "title": "Heading rule",
+      "description": "Editorial rules combine the short signal line with the structural rule.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-rules-editorial",
+      "options": [
+        {
+          "label": "Editorial rules",
+          "value": "cyriform-rules-editorial"
+        },
+        {
+          "label": "Fine rules",
+          "value": "cyriform-rules-fine"
+        },
+        {
+          "label": "Open spacing",
+          "value": "cyriform-rules-none"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-heading-labels",
+      "title": "Heading level labels",
+      "description": "Show H1 to H6 markers beside headings using a compact editorial label.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-h1-size",
+      "title": "H1 size",
+      "description": "Size of level 1 headings in reading and editing.",
+      "type": "variable-number-slider",
+      "default": 2.2,
+      "min": 0.8,
+      "max": 3.5,
+      "step": 0.05,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-h1-weight",
+      "title": "H1 weight",
+      "description": "Weight of level 1 headings.",
+      "type": "variable-number-slider",
+      "default": 600,
+      "min": 400,
+      "max": 800,
+      "step": 50
+    },
+    {
+      "id": "cyriform-h1-colour",
+      "title": "H1 custom colour",
+      "description": "Used by the Custom by level heading system.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#24262B",
+      "default-dark": "#E8E3D9"
+    },
+    {
+      "id": "cyriform-h2-size",
+      "title": "H2 size",
+      "description": "Size of level 2 headings in reading and editing.",
+      "type": "variable-number-slider",
+      "default": 1.7,
+      "min": 0.8,
+      "max": 3.5,
+      "step": 0.05,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-h2-weight",
+      "title": "H2 weight",
+      "description": "Weight of level 2 headings.",
+      "type": "variable-number-slider",
+      "default": 600,
+      "min": 400,
+      "max": 800,
+      "step": 50
+    },
+    {
+      "id": "cyriform-h2-colour",
+      "title": "H2 custom colour",
+      "description": "Used by the Custom by level heading system.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#24262B",
+      "default-dark": "#E8E3D9"
+    },
+    {
+      "id": "cyriform-h3-size",
+      "title": "H3 size",
+      "description": "Size of level 3 headings in reading and editing.",
+      "type": "variable-number-slider",
+      "default": 1.4,
+      "min": 0.8,
+      "max": 3.5,
+      "step": 0.05,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-h3-weight",
+      "title": "H3 weight",
+      "description": "Weight of level 3 headings.",
+      "type": "variable-number-slider",
+      "default": 600,
+      "min": 400,
+      "max": 800,
+      "step": 50
+    },
+    {
+      "id": "cyriform-h3-colour",
+      "title": "H3 custom colour",
+      "description": "Used by the Custom by level heading system.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#24262B",
+      "default-dark": "#E8E3D9"
+    },
+    {
+      "id": "cyriform-h4-size",
+      "title": "H4 size",
+      "description": "Size of level 4 headings in reading and editing.",
+      "type": "variable-number-slider",
+      "default": 1.2,
+      "min": 0.8,
+      "max": 3.5,
+      "step": 0.05,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-h4-weight",
+      "title": "H4 weight",
+      "description": "Weight of level 4 headings.",
+      "type": "variable-number-slider",
+      "default": 650,
+      "min": 400,
+      "max": 800,
+      "step": 50
+    },
+    {
+      "id": "cyriform-h4-colour",
+      "title": "H4 custom colour",
+      "description": "Used by the Custom by level heading system.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#24262B",
+      "default-dark": "#E8E3D9"
+    },
+    {
+      "id": "cyriform-h5-size",
+      "title": "H5 size",
+      "description": "Size of level 5 headings in reading and editing.",
+      "type": "variable-number-slider",
+      "default": 1.08,
+      "min": 0.8,
+      "max": 3.5,
+      "step": 0.05,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-h5-weight",
+      "title": "H5 weight",
+      "description": "Weight of level 5 headings.",
+      "type": "variable-number-slider",
+      "default": 650,
+      "min": 400,
+      "max": 800,
+      "step": 50
+    },
+    {
+      "id": "cyriform-h5-colour",
+      "title": "H5 custom colour",
+      "description": "Used by the Custom by level heading system.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#24262B",
+      "default-dark": "#E8E3D9"
+    },
+    {
+      "id": "cyriform-h6-size",
+      "title": "H6 size",
+      "description": "Size of level 6 headings in reading and editing.",
+      "type": "variable-number-slider",
+      "default": 1,
+      "min": 0.8,
+      "max": 3.5,
+      "step": 0.05,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-h6-weight",
+      "title": "H6 weight",
+      "description": "Weight of level 6 headings.",
+      "type": "variable-number-slider",
+      "default": 650,
+      "min": 400,
+      "max": 800,
+      "step": 50
+    },
+    {
+      "id": "cyriform-h6-colour",
+      "title": "H6 custom colour",
+      "description": "Used by the Custom by level heading system.",
+      "type": "variable-themed-color",
+      "format": "hex",
+      "opacity": false,
+      "default-light": "#24262B",
+      "default-dark": "#E8E3D9"
+    },
+    {
+      "id": "cyriform-section-layout",
+      "title": "Layout and geometry",
+      "type": "heading",
+      "level": 1,
+      "collapsed": true
+    },
+    {
+      "id": "cyriform-measure",
+      "title": "Reading measure",
+      "description": "Maximum prose width. Per-note widths remain available.",
+      "type": "variable-number-slider",
+      "default": 70,
+      "min": 45,
+      "max": 100,
+      "step": 1,
+      "format": "ch"
+    },
+    {
+      "id": "cyriform-gutter",
+      "title": "Document gutter",
+      "description": "Horizontal breathing space around the document.",
+      "type": "variable-number-slider",
+      "default": 36,
+      "min": 16,
+      "max": 80,
+      "step": 2,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-vertical-space",
+      "title": "Document vertical space",
+      "description": "Space above and below the editing surface.",
+      "type": "variable-number-slider",
+      "default": 36,
+      "min": 12,
+      "max": 100,
+      "step": 4,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-indent",
+      "title": "List indentation",
+      "description": "Nested list indentation.",
+      "type": "variable-number-slider",
+      "default": 2,
+      "min": 1.2,
+      "max": 3.5,
+      "step": 0.1,
+      "format": "em"
+    },
+    {
+      "id": "cyriform-radius",
+      "title": "Control corner radius",
+      "description": "Small, precise corners across the interface.",
+      "type": "variable-number-slider",
+      "default": 3,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-border-width",
+      "title": "Structural line width",
+      "description": "Width of structural surface borders.",
+      "type": "variable-number-slider",
+      "default": 1,
+      "min": 0,
+      "max": 2,
+      "step": 0.5,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-scrollbar",
+      "title": "Scrollbar width",
+      "description": "Width of desktop scrollbars.",
+      "type": "variable-number-slider",
+      "default": 8,
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-density",
+      "title": "Workspace density",
+      "description": "Adjust the rhythm of navigation and property rows.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-density-standard",
+      "options": [
+        {
+          "label": "Standard",
+          "value": "cyriform-density-standard"
+        },
+        {
+          "label": "Compact",
+          "value": "cyriform-density-compact"
+        },
+        {
+          "label": "Spacious",
+          "value": "cyriform-density-spacious"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-surface",
+      "title": "Overlay material",
+      "description": "Transient menus can use a restrained translucent surface. Accessibility preferences retain solid surfaces.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-surface-solid",
+      "options": [
+        {
+          "label": "Solid",
+          "value": "cyriform-surface-solid"
+        },
+        {
+          "label": "Translucent",
+          "value": "cyriform-surface-translucent"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-texture",
+      "title": "Document ground",
+      "description": "Choose a subtle writing texture with a stable solid fallback.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-texture-plain",
+      "options": [
+        {
+          "label": "Plain",
+          "value": "cyriform-texture-plain"
+        },
+        {
+          "label": "Ruled",
+          "value": "cyriform-texture-ruled"
+        },
+        {
+          "label": "Dotted",
+          "value": "cyriform-texture-dots"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-pane-lines",
+      "title": "Pane dividing lines",
+      "description": "Add fine boundaries between workspace panes.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-tree-guides",
+      "title": "File tree guides",
+      "description": "Reveal hierarchy guides beneath file folders.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-list-guides",
+      "title": "List guides",
+      "description": "Reveal indentation guides in nested prose lists.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-focus-mode",
+      "title": "Focused writing",
+      "description": "Emphasise the active editor line while preserving legibility of surrounding text.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-active-line",
+      "title": "Active line surface",
+      "description": "Give the current editor line a quiet raised surface.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-section-content",
+      "title": "Content treatments",
+      "type": "heading",
+      "level": 1,
+      "collapsed": true
+    },
+    {
+      "id": "cyriform-callout",
+      "title": "Callout treatment",
+      "description": "Use a fine top rule, outlined boundary, tinted field or open annotation.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-callout-ledger",
+      "options": [
+        {
+          "label": "Ledger",
+          "value": "cyriform-callout-ledger"
+        },
+        {
+          "label": "Outline",
+          "value": "cyriform-callout-outline"
+        },
+        {
+          "label": "Tinted plane",
+          "value": "cyriform-callout-tinted"
+        },
+        {
+          "label": "Open margin",
+          "value": "cyriform-callout-open"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-highlight",
+      "title": "Highlight treatment",
+      "description": "Choose how marked text carries the knowledge colour.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-highlight-line",
+      "options": [
+        {
+          "label": "Knowledge underline",
+          "value": "cyriform-highlight-line"
+        },
+        {
+          "label": "Soft wash",
+          "value": "cyriform-highlight-wash"
+        },
+        {
+          "label": "Solid marker",
+          "value": "cyriform-highlight-solid"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-tags",
+      "title": "Tag treatment",
+      "description": "Semantic tags recognise urgent, blocked, done, reference, idea and related English terms.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-tags-index",
+      "options": [
+        {
+          "label": "Index labels",
+          "value": "cyriform-tags-index"
+        },
+        {
+          "label": "Semantic states",
+          "value": "cyriform-tags-semantic"
+        },
+        {
+          "label": "Outlined labels",
+          "value": "cyriform-tags-outline"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-folders",
+      "title": "Folder signals",
+      "description": "Add a measured signal to folder depth or recognised workflow names.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-folders-plain",
+      "options": [
+        {
+          "label": "Plain",
+          "value": "cyriform-folders-plain"
+        },
+        {
+          "label": "Depth",
+          "value": "cyriform-folders-depth"
+        },
+        {
+          "label": "Semantic names",
+          "value": "cyriform-folders-semantic"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-links",
+      "title": "Link underline",
+      "description": "The interaction colour remains visible for every link treatment.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-links-fine",
+      "options": [
+        {
+          "label": "Fine",
+          "value": "cyriform-links-fine"
+        },
+        {
+          "label": "On hover",
+          "value": "cyriform-links-on-hover"
+        },
+        {
+          "label": "Emphasised",
+          "value": "cyriform-links-strong"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-unresolved",
+      "title": "Unresolved links",
+      "description": "Indicate links whose destination is still to be created.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-unresolved-dashed",
+      "options": [
+        {
+          "label": "Dashed",
+          "value": "cyriform-unresolved-dashed"
+        },
+        {
+          "label": "Muted",
+          "value": "cyriform-unresolved-muted"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-dividers",
+      "title": "Section dividers",
+      "description": "Divide prose with the theme\u2019s structural line language.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-divider-signal",
+      "options": [
+        {
+          "label": "Fine rule",
+          "value": "cyriform-divider-rule"
+        },
+        {
+          "label": "Signal and rule",
+          "value": "cyriform-divider-signal"
+        },
+        {
+          "label": "Double rule",
+          "value": "cyriform-divider-double"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-list-markers",
+      "title": "List marker shape",
+      "description": "Keep native list layout while varying the drawn marker.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-markers-depth",
+      "options": [
+        {
+          "label": "Round",
+          "value": "cyriform-markers-round"
+        },
+        {
+          "label": "Square",
+          "value": "cyriform-markers-square"
+        },
+        {
+          "label": "By depth",
+          "value": "cyriform-markers-depth"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-native-tasks",
+      "title": "Native task appearance",
+      "description": "Use the application\u2019s standard checkbox treatment.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-wrap-code",
+      "title": "Wrap code blocks",
+      "description": "Wrap long code lines within their container.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-table-wide",
+      "title": "Full-width tables",
+      "description": "Allow tables to use the available document width.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-table-stripes",
+      "title": "Table row bands",
+      "description": "Add a quiet alternating surface to table rows.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-table-grid",
+      "title": "Table cell grid",
+      "description": "Add fine borders around all table cells.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-diagram-scroll",
+      "title": "Scrollable diagrams",
+      "description": "Keep wide Mermaid diagrams and equations in a horizontally scrollable region.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-properties-compact",
+      "title": "Compact properties",
+      "description": "Reduce vertical space in the property ledger.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-section-media",
+      "title": "Images and embedded content",
+      "type": "heading",
+      "level": 1,
+      "collapsed": true
+    },
+    {
+      "id": "cyriform-image-radius",
+      "title": "Image corner radius",
+      "description": "Corner radius for note images.",
+      "type": "variable-number-slider",
+      "default": 2,
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-image-width",
+      "title": "Maximum image width",
+      "description": "Maximum width of ordinary images.",
+      "type": "variable-number-slider",
+      "default": 100,
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "format": "%"
+    },
+    {
+      "id": "cyriform-banner-height",
+      "title": "Banner image height",
+      "description": "Height for images with the cyriform-banner layout token.",
+      "type": "variable-number-slider",
+      "default": 260,
+      "min": 120,
+      "max": 500,
+      "step": 10,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-embed-height",
+      "title": "Embed maximum height",
+      "description": "Scrollable maximum height for embedded notes.",
+      "type": "variable-number-slider",
+      "default": 600,
+      "min": 200,
+      "max": 1200,
+      "step": 20,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-image-shadow",
+      "title": "Image depth",
+      "description": "Add a restrained offset shadow beneath note images.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-embed-open",
+      "title": "Open embeds",
+      "description": "Use an open ruled treatment for embedded notes.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-section-motion",
+      "title": "Motion and mobile",
+      "type": "heading",
+      "level": 1,
+      "collapsed": true
+    },
+    {
+      "id": "cyriform-motion",
+      "title": "Motion",
+      "description": "A brief settling motion accompanies transient layers. System reduced-motion preferences always apply.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-motion-subtle",
+      "options": [
+        {
+          "label": "Subtle",
+          "value": "cyriform-motion-subtle"
+        },
+        {
+          "label": "Still",
+          "value": "cyriform-motion-still"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-motion-duration",
+      "title": "Settling duration",
+      "description": "Duration of the transient-layer settling motion.",
+      "type": "variable-number-slider",
+      "default": 160,
+      "min": 80,
+      "max": 300,
+      "step": 10,
+      "format": "ms"
+    },
+    {
+      "id": "cyriform-touch-size",
+      "title": "Mobile control size",
+      "description": "Minimum target height for mobile controls.",
+      "type": "variable-number-slider",
+      "default": 44,
+      "min": 44,
+      "max": 56,
+      "step": 2,
+      "format": "px"
+    },
+    {
+      "id": "cyriform-mobile-dense",
+      "title": "Compact mobile reading",
+      "description": "Reduce page gutters while keeping the touch target size.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-mobile-ribbon",
+      "title": "Show mobile ribbon",
+      "description": "Keep the native mobile ribbon available within its application layout.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-section-export",
+      "title": "Print and PDF export",
+      "type": "heading",
+      "level": 1,
+      "collapsed": true
+    },
+    {
+      "id": "cyriform-print-dark",
+      "title": "Keep dark colours in exports",
+      "description": "Retain the selected theme palette when the export tool prints backgrounds.",
+      "type": "class-toggle",
+      "default": false
+    },
+    {
+      "id": "cyriform-print-font",
+      "title": "Print reading font",
+      "description": "Choose the reading family for printed pages.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-print-serif",
+      "options": [
+        {
+          "label": "Editorial serif",
+          "value": "cyriform-print-serif"
+        },
+        {
+          "label": "Interface sans",
+          "value": "cyriform-print-sans"
+        },
+        {
+          "label": "Monospace",
+          "value": "cyriform-print-mono"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-print-align",
+      "title": "Print paragraph alignment",
+      "description": "Choose paragraph alignment for print. Justified text uses automatic hyphenation.",
+      "type": "class-select",
+      "allowEmpty": false,
+      "default": "cyriform-print-left",
+      "options": [
+        {
+          "label": "Left aligned",
+          "value": "cyriform-print-left"
+        },
+        {
+          "label": "Justified",
+          "value": "cyriform-print-justified"
+        }
+      ]
+    },
+    {
+      "id": "cyriform-print-size",
+      "title": "Print text size",
+      "description": "Body size for printed pages.",
+      "type": "variable-number-slider",
+      "default": 12,
+      "min": 9,
+      "max": 18,
+      "step": 0.5,
+      "format": "pt"
+    },
+    {
+      "id": "cyriform-print-links",
+      "title": "Print link destinations",
+      "description": "Append external URL destinations in printed output.",
+      "type": "class-toggle",
+      "default": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+filters:
+  and:
+    - file.hasTag("cyriform")
+properties:
+  status:
+    displayName: Status
+views:
+  - type: table
+    name: Research ledger
+    order:
+      - file.name
+      - status
+      - file.mtime
+  - type: cards
+    name: Reading collection
+    order:
+      - file.name
+      - status

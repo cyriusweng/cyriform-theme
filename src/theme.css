@@ -1,4 +1,4 @@
-/* Cyriform 1.0.1 | Ground, Force and Variations | British English */
+/* Cyriform 1.0.2 | Ground, Force and Variations | British English */
 body.theme-dark {
   --cf-ground: var(--cyriform-ground, #07080A);
   --cf-paper: var(--cyriform-paper, #0C0E13);
@@ -138,7 +138,8 @@ body {
   --code-string: var(--cf-success);
   --code-property: var(--cf-tip);
   --code-value: var(--cf-gold);
-  --code-size: var(--cyriform-code-size, .82em);
+  --code-size: var(--cyriform-code-size, .78em);
+  --code-line-height: 1.6;
   --tag-color: var(--cf-muted);
   --tag-color-hover: var(--cf-accent);
   --tag-background: transparent;
@@ -350,12 +351,16 @@ body:not(.cyriform-rules-none):not(.cyriform-rules-fine) :is(.inline-title, .mar
 }
 
 .markdown-rendered pre {
+  font-size: var(--code-size);
+  line-height: var(--code-line-height);
   border: 1px solid var(--cf-rule);
   border-radius: var(--cf-radius);
   padding: 1.2em;
 }
 
 .markdown-rendered pre code {
+  font-size: inherit;
+  line-height: inherit;
   color: var(--cf-ink);
   background: transparent;
 }
@@ -367,6 +372,10 @@ body:not(.cyriform-rules-none):not(.cyriform-rules-fine) :is(.inline-title, .mar
 
 .cm-line.HyperMD-codeblock {
   color: var(--cf-ink);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  line-height: var(--code-line-height);
 }
 
 .markdown-rendered :is(blockquote, .footnotes) {

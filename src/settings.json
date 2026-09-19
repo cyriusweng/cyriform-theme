@@ -202,7 +202,7 @@
       "title": "Code size",
       "description": "Code size relative to prose.",
       "type": "variable-number-slider",
-      "default": 0.82,
+      "default": 0.78,
       "min": 0.7,
       "max": 1.1,
       "step": 0.01,

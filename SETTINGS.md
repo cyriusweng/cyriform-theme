@@ -27,7 +27,7 @@ Style Settings exposes the following 89 controls. The theme supplies the same de
 | Interface size<br>`cyriform-ui-size` | `16px` | Navigation and control text size. Range: 13–21px; step 1. |
 | Reading line height<br>`cyriform-line-height` | `1.65` | Space between lines of prose. Range: 1.3–2.2; step 0.05. |
 | Reading letter spacing<br>`cyriform-tracking` | `0em` | Fine tracking adjustment for the reading font. Range: -0.02–0.06em; step 0.005. |
-| Code size<br>`cyriform-code-size` | `0.82em` | Code size relative to prose. Range: 0.7–1.1em; step 0.01. |
+| Code size<br>`cyriform-code-size` | `0.78em` | Code size relative to prose. Range: 0.7–1.1em; step 0.01. |
 | Paragraph spacing<br>`cyriform-paragraph-gap` | `1.1em` | Space after each prose paragraph. Range: 0.5–2em; step 0.1. |
 | Code ligatures<br>`cyriform-ligatures` | Off | Enable contextual and discretionary ligatures supported by the chosen code font. |
 | First-line paragraph indent<br>`cyriform-prose-indent` | Off | Indent ordinary paragraphs in Reading view; opening paragraphs stay aligned. |

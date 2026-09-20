@@ -6,7 +6,7 @@ Style Settings exposes the following 89 controls. The theme supplies the same de
 
 | Setting | Default | Behaviour and accepted values |
 | --- | --- | --- |
-| Atmosphere<br>`cyriform-state` | Clarity | Choose a variation of Ground, Force and Variations. Each state retains the same structure and semantic roles. Choices: Clarity, Home, Becoming, Intimacy, Release. |
+| Atmosphere<br>`cyriform-state` | Clarity | One state of Ground, Force and Variations for the whole workspace. Each state retunes reading measure, spacing, interface density, surface warmth, the force line and motion while keeping structure and colour roles. Choices: Clarity, Home, Becoming, Intimacy, Release. Per-note atmospheres are available through Cyriform Companion. |
 | Interaction colour<br>`cyriform-accent` | Light `#3156C9`; dark `#91ABFF` | Links, focus and selected controls. |
 | Knowledge colour<br>`cyriform-gold` | Light `#795722`; dark `#C6A56F` | Highlights, references and marked knowledge. |
 | Attention colour<br>`cyriform-oxblood` | Light `#76273A`; dark `#D695A7` | Critical states and editorial counterforce. |

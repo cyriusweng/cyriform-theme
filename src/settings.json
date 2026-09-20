@@ -12,7 +12,7 @@
     {
       "id": "cyriform-state",
       "title": "Atmosphere",
-      "description": "Choose a variation of Ground, Force and Variations. Each state retains the same structure and semantic roles.",
+      "description": "One state of Ground, Force and Variations for the whole workspace. Each state retunes reading measure, spacing, interface density, surface warmth, the force line and motion while keeping structure and colour roles.",
       "type": "class-select",
       "allowEmpty": false,
       "default": "cyriform-clarity",

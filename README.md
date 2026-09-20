@@ -8,7 +8,7 @@ An editorial theme for Obsidian, built around Ground, Force and Variations. Home
 
 Cyriform includes 89 controls through the [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings). Reading, heading, interface and code fonts each have their own editable field. The defaults are EB Garamond for reading, Cormorant Garamond for headings, Beiruti for the interface and IBM Plex Mono at the head of a local monospace fallback stack. The first three families are embedded for offline use. Code fonts resolve through IBM Plex Mono, JetBrains Mono, Menlo, Consolas and the platform’s monospace family.
 
-The initial reading size is 19px, with a 1.65 line height and a 70ch measure. Five atmospheres, Home, Clarity, Becoming, Intimacy and Release, vary selected signals over the same structure. Colour roles, heading levels, layout, density, callouts, highlights, tags, tables, images, motion and print settings remain independently adjustable. See the complete [settings reference](./SETTINGS.md).
+The initial reading size is 19px, with a 1.65 line height and a 70ch measure. Five atmospheres, Home, Clarity, Becoming, Intimacy and Release, retune reading measure, page spacing, interface density, surface warmth, the title force line and transient-layer pace. Colour roles, heading levels, layout, density, callouts, highlights, tags, tables, images, motion and print settings remain independently adjustable. See the complete [settings reference](./SETTINGS.md).
 
 ![Cyriform in light-mode Live Preview](./screenshots/light.png)
 
@@ -26,19 +26,20 @@ Style Settings is optional. The theme includes its own defaults and embedded fon
 
 ## Optional companion
 
-[Cyriform Companion](https://github.com/cyriusweng/cyriform-companion) provides searchable visual pickers for note states, types, widths, accents, callouts, highlights, task states and image layouts. It includes commands, a ribbon shortcut, an editor context-menu entry and an optional toolbar.
+[Cyriform Companion](https://github.com/cyriusweng/cyriform-companion) provides searchable visual pickers for note states, note atmospheres, types, widths, accents, callouts, highlights, task states and image layouts. It includes commands, a ribbon shortcut, an editor context-menu entry and an optional toolbar.
 
 Per-note styles can also be entered directly in the `cssclasses` property:
 
 ```yaml
 cssclasses:
   - cyriform-important
+  - cyriform-atmo-home
   - cyriform-project
   - cyriform-wide
   - cyriform-accent-gold
 ```
 
-The state choices are `important`, `alert`, `draft`, `archived` and `pinned`; note types are `meeting`, `daily`, `index` and `project`; widths are `narrow`, `wide` and `full-width`. Accent suffixes are `cobalt`, `gold`, `oxblood`, `mineral` and `bone`. Prefix each state, type or width with `cyriform-`, and each accent with `cyriform-accent-`.
+The state choices are `important`, `alert`, `draft`, `archived` and `pinned`; note atmospheres are `atmo-clarity`, `atmo-home`, `atmo-becoming`, `atmo-intimacy` and `atmo-release`; note types are `meeting`, `daily`, `index`, `project`, `question`, `note`, `essay` and `letter`; widths are `narrow`, `wide` and `full-width`. Accent suffixes are `cobalt`, `gold`, `oxblood`, `mineral` and `bone`. Prefix each state, atmosphere, type or width with `cyriform-`, and each accent with `cyriform-accent-`.
 
 Image layout tokens belong in the image description: `cyriform-banner`, `cyriform-left`, `cyriform-right`, `cyriform-grid` and `cyriform-invert`. The [examples](./examples) directory contains a Markdown specimen, a Base, a Canvas and original demonstration artwork.
 
@@ -46,7 +47,7 @@ Image layout tokens belong in the image description: `cyriform-banner`, `cyrifor
 
 The theme operates entirely through local CSS and embedded font assets. All features are available free of charge and operate offline. The downloadable CSS contains the font copyright and licence notices.
 
-Native verification used Obsidian 1.13.7 on macOS and covered theme loading, Reading view, Live Preview, four independent Style Settings font changes, Bases and Canvas. Chromium checks covered light and dark rendering, desktop and mobile-width layouts, keyboard focus, reduced motion, default colour contrast and a two-page PDF. Physical iOS and Android devices and complete third-party plugin workflows remain further verification targets. User-selected colours and other snippets can alter measured contrast and layout.
+Native verification used Obsidian 1.13.7 on macOS and covered theme loading, Reading view, Live Preview, four independent Style Settings font changes, Bases and Canvas. Cyriform 1.1.0 passed 39 Chromium assertions across light and dark rendering, all five atmosphere compositions, per-note atmosphere scope, desktop and mobile-width layouts, keyboard focus, reduced motion, default colour contrast and a two-page PDF. Physical iOS and Android devices and complete third-party plugin workflows remain further verification targets. User-selected colours and other snippets can alter measured contrast and layout.
 
 ## Development and support
 

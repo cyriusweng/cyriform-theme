@@ -1127,16 +1127,16 @@ img[alt*="cyriform-banner"],
  object-fit: cover;
 }
 
-/* ponytail: floats stay in reading view; CodeMirror measures editor lines and a floated embed can pull blocks out of that flow. */
-.markdown-reading-view img[alt*="cyriform-left"]:not(.image-embed img),
-.markdown-reading-view .image-embed[alt*="cyriform-left"] {
+/* ponytail: floats stay in reading view; the :where() wrapper keeps the specificity of the original selectors so the narrow-width override below still wins. */
+:where(.markdown-reading-view) img[alt*="cyriform-left"]:not(.image-embed img),
+:where(.markdown-reading-view) .image-embed[alt*="cyriform-left"] {
  float: left;
  max-width: 45%;
  margin: 0 1em .6em 0;
 }
 
-.markdown-reading-view img[alt*="cyriform-right"]:not(.image-embed img),
-.markdown-reading-view .image-embed[alt*="cyriform-right"] {
+:where(.markdown-reading-view) img[alt*="cyriform-right"]:not(.image-embed img),
+:where(.markdown-reading-view) .image-embed[alt*="cyriform-right"] {
  float: right;
  max-width: 45%;
  margin: 0 0 .6em 1em;
@@ -1568,9 +1568,10 @@ body:not(.cyriform-motion-still) :is(.prompt, .menu, .cyriform-picker) {
   font-size: .92em;
  }
 
- img[alt*="cyriform-left"],
- img[alt*="cyriform-right"],
+ /* ponytail: this override mirrors the reading-view selectors' specificity and sits later in the file, so it wins the cascade on narrow widths. */
+ img[alt*="cyriform-left"]:not(.image-embed img),
  .image-embed[alt*="cyriform-left"],
+ img[alt*="cyriform-right"]:not(.image-embed img),
  .image-embed[alt*="cyriform-right"] {
   float: none;
   max-width: 100%;

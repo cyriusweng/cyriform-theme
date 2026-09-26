@@ -305,7 +305,7 @@
     {
       "id": "cyriform-heading-labels",
       "title": "Heading level labels",
-      "description": "Show H1 to H6 markers beside headings using a compact editorial label.",
+      "description": "Show H1 to H6 markers beside headings in reading view.",
       "type": "class-toggle",
       "default": false
     },

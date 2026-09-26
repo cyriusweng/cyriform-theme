@@ -28,7 +28,7 @@ for (let n = 1; n <= 6; n++) {
 details += '}\n';
 for (let n = 1; n <= 6; n++) {
   details += `.cyriform-headings-accent {--h${n}-color:var(--cf-accent);}\n.cyriform-headings-custom {--h${n}-color:var(--cyriform-h${n}-colour,var(--cf-bright));}\n`;
-  details += `.cyriform-heading-labels .markdown-rendered h${n}::before,.cyriform-heading-labels .HyperMD-header-${n}::before {content:"H${n}";}\n`;
+  details += `.cyriform-heading-labels .markdown-rendered h${n}::before {content:"H${n}";}\n`;
 }
 const symbols = {
   '>': 'M4 3l5 5-5 5', '<': 'M10 3L5 8l5 5', '?': 'M5 5a3 3 0 0 1 6 0c0 2-3 2-3 4M8 12v1',

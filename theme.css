@@ -305,7 +305,7 @@ settings: [
   {
     "id": "cyriform-heading-labels",
     "title": "Heading level labels",
-    "description": "Show H1 to H6 markers beside headings using a compact editorial label.",
+    "description": "Show H1 to H6 markers beside headings in reading view.",
     "type": "class-toggle",
     "default": false
   },
@@ -1482,6 +1482,8 @@ body.theme-light {
  --cf-highlight-ink: #342B18;
  --cf-highlight-bg: #F0D69D;
  --cf-search: #F0D69D;
+ /* ponytail: transient message surfaces such as tooltips render white text, so light mode gives them the dark ink tone instead of the raised paper tint. */
+ --background-modifier-message: var(--cf-bright);
 }
 
 body {
@@ -1788,12 +1790,18 @@ body.cyriform-density-spacious {
  letter-spacing: var(--cyriform-tracking, 0em);
 }
 
-.markdown-rendered :is(h1, h2, h3, h4, h5, h6),
-.HyperMD-header {
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
  font-family: var(--cf-display);
  line-height: 1.22;
  letter-spacing: -.012em;
  text-wrap: balance;
+}
+
+/* ponytail: the editor keeps ordinary wrapping so CodeMirror's line-block measurement stays predictable. */
+.HyperMD-header {
+ font-family: var(--cf-display);
+ line-height: 1.22;
+ letter-spacing: -.012em;
 }
 
 .inline-title {
@@ -1831,17 +1839,12 @@ body:not(.cyriform-rules-none):not(.cyriform-rules-fine) :is(.inline-title, .mar
  background-image: none;
 }
 
+/* ponytail: level labels render only in reading view; an in-flow ::before inside an editor line changes its measured width. */
 .cyriform-heading-labels .markdown-rendered :is(h1, h2, h3, h4, h5, h6)::before {
  font: 500 .42em var(--cf-ui);
  color: var(--cf-muted);
  margin-inline-end: 1em;
  letter-spacing: .08em;
-}
-
-.cyriform-heading-labels .HyperMD-header::before {
- font: 500 .55em var(--cf-ui);
- color: var(--cf-muted);
- margin-inline-end: 1em;
 }
 
 .cyriform-emphasis-gold {
@@ -2553,15 +2556,16 @@ img[alt*="cyriform-banner"],
  object-fit: cover;
 }
 
-img[alt*="cyriform-left"]:not(.image-embed img),
-.image-embed[alt*="cyriform-left"] {
+/* ponytail: floats stay in reading view; CodeMirror measures editor lines and a floated embed can pull blocks out of that flow. */
+.markdown-reading-view img[alt*="cyriform-left"]:not(.image-embed img),
+.markdown-reading-view .image-embed[alt*="cyriform-left"] {
  float: left;
  max-width: 45%;
  margin: 0 1em .6em 0;
 }
 
-img[alt*="cyriform-right"]:not(.image-embed img),
-.image-embed[alt*="cyriform-right"] {
+.markdown-reading-view img[alt*="cyriform-right"]:not(.image-embed img),
+.markdown-reading-view .image-embed[alt*="cyriform-right"] {
  float: right;
  max-width: 45%;
  margin: 0 0 .6em 1em;
@@ -3172,22 +3176,22 @@ body {
 }
 .cyriform-headings-accent {--h1-color:var(--cf-accent);}
 .cyriform-headings-custom {--h1-color:var(--cyriform-h1-colour,var(--cf-bright));}
-.cyriform-heading-labels .markdown-rendered h1::before,.cyriform-heading-labels .HyperMD-header-1::before {content:"H1";}
+.cyriform-heading-labels .markdown-rendered h1::before {content:"H1";}
 .cyriform-headings-accent {--h2-color:var(--cf-accent);}
 .cyriform-headings-custom {--h2-color:var(--cyriform-h2-colour,var(--cf-bright));}
-.cyriform-heading-labels .markdown-rendered h2::before,.cyriform-heading-labels .HyperMD-header-2::before {content:"H2";}
+.cyriform-heading-labels .markdown-rendered h2::before {content:"H2";}
 .cyriform-headings-accent {--h3-color:var(--cf-accent);}
 .cyriform-headings-custom {--h3-color:var(--cyriform-h3-colour,var(--cf-bright));}
-.cyriform-heading-labels .markdown-rendered h3::before,.cyriform-heading-labels .HyperMD-header-3::before {content:"H3";}
+.cyriform-heading-labels .markdown-rendered h3::before {content:"H3";}
 .cyriform-headings-accent {--h4-color:var(--cf-accent);}
 .cyriform-headings-custom {--h4-color:var(--cyriform-h4-colour,var(--cf-bright));}
-.cyriform-heading-labels .markdown-rendered h4::before,.cyriform-heading-labels .HyperMD-header-4::before {content:"H4";}
+.cyriform-heading-labels .markdown-rendered h4::before {content:"H4";}
 .cyriform-headings-accent {--h5-color:var(--cf-accent);}
 .cyriform-headings-custom {--h5-color:var(--cyriform-h5-colour,var(--cf-bright));}
-.cyriform-heading-labels .markdown-rendered h5::before,.cyriform-heading-labels .HyperMD-header-5::before {content:"H5";}
+.cyriform-heading-labels .markdown-rendered h5::before {content:"H5";}
 .cyriform-headings-accent {--h6-color:var(--cf-accent);}
 .cyriform-headings-custom {--h6-color:var(--cyriform-h6-colour,var(--cf-bright));}
-.cyriform-heading-labels .markdown-rendered h6::before,.cyriform-heading-labels .HyperMD-header-6::before {content:"H6";}
+.cyriform-heading-labels .markdown-rendered h6::before {content:"H6";}
 body:not(.cyriform-native-tasks) :is(.task-list-item,.HyperMD-task-line)[data-task=">"] .task-list-item-checkbox {background:var(--cf-paper);border-color:var(--cf-gold);}
 body:not(.cyriform-native-tasks) :is(.task-list-item,.HyperMD-task-line)[data-task=">"] .task-list-item-checkbox::after {content:"";position:absolute;inset:0;width:100%;height:100%;background:var(--cf-gold);mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4%203l5%205-5%205%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4%203l5%205-5%205%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;}
 body:not(.cyriform-native-tasks) :is(.task-list-item,.HyperMD-task-line)[data-task="<"] .task-list-item-checkbox {background:var(--cf-paper);border-color:var(--cf-gold);}

@@ -1,20 +1,20 @@
 # Cyriform settings
 
-Style Settings exposes the following 89 controls. The theme supplies the same defaults when the plugin is inactive. Resetting a field returns it to the theme default. Colour overrides are stored independently for light and dark appearance. Font fields accept a CSS font-family stack; class choices apply to the entire workspace. Per-note classes are documented in README.md.
+Open **Settings → Style Settings → Cyriform** to find these 89 controls. The theme uses the listed defaults when Style Settings is inactive. Reset a field to return to its default. You can set colours separately for light and dark mode. Font fields accept a CSS font-family list, such as `"EB Garamond", Georgia, serif`. These controls apply across the vault; the [README](https://github.com/cyriusweng/cyriform-theme#style-individual-notes-with-cyriform-companion) explains per-note styles. Setting names and choices below match the plugin's labels.
 
 ## Identity and colour
 
 | Setting | Default | Behaviour and accepted values |
 | --- | --- | --- |
-| Atmosphere<br>`cyriform-state` | Clarity | One state of Ground, Force and Variations for the whole workspace. Each state retunes reading measure, spacing, interface density, surface warmth, the force line and motion while keeping structure and colour roles. Choices: Clarity, Home, Becoming, Intimacy, Release. Per-note atmospheres are available through Cyriform Companion. |
+| Atmosphere<br>`cyriform-state` | Clarity | A preset for page width, spacing, colours, interface density, title lines and animation. Choose Clarity, Home, Becoming, Intimacy or Release. Some presets set their own width and spacing; choose Clarity to use the general layout controls. |
 | Interaction colour<br>`cyriform-accent` | Light `#3156C9`; dark `#91ABFF` | Links, focus and selected controls. |
-| Knowledge colour<br>`cyriform-gold` | Light `#795722`; dark `#C6A56F` | Highlights, references and marked knowledge. |
-| Attention colour<br>`cyriform-oxblood` | Light `#76273A`; dark `#D695A7` | Critical states and editorial counterforce. |
-| Completion colour<br>`cyriform-success` | Light `#35644E`; dark `#92BBA4` | Completed work and positive semantic states. |
-| Reading surface<br>`cyriform-paper` | Light `#FBF8F1`; dark `#0C0E13` | The document plane behind prose. |
+| Knowledge colour<br>`cyriform-gold` | Light `#795722`; dark `#C6A56F` | Gold accents for highlights, references and important items. |
+| Attention colour<br>`cyriform-oxblood` | Light `#76273A`; dark `#D695A7` | Red accents for warnings and items needing attention. |
+| Completion colour<br>`cyriform-success` | Light `#35644E`; dark `#92BBA4` | Green accents for completed work and success callouts. |
+| Reading surface<br>`cyriform-paper` | Light `#FBF8F1`; dark `#0C0E13` | The page background behind your text. |
 | Workspace ground<br>`cyriform-ground` | Light `#E8E3D9`; dark `#07080A` | Sidebars, ribbon and the surrounding workspace. |
 | Code surface<br>`cyriform-code-bg` | Light `#EEE9DE`; dark `#12151D` | The background of inline and fenced code. |
-| Structural line<br>`cyriform-rule` | Light `#C9C1B2`; dark `#353B48` | Fine rules separating related surfaces. |
+| Structural line<br>`cyriform-rule` | Light `#C9C1B2`; dark `#353B48` | The colour of borders and dividing lines. |
 ## Typography
 
 | Setting | Default | Behaviour and accepted values |
@@ -31,14 +31,14 @@ Style Settings exposes the following 89 controls. The theme supplies the same de
 | Paragraph spacing<br>`cyriform-paragraph-gap` | `1.1em` | Space after each prose paragraph. Range: 0.5–2em; step 0.1. |
 | Code ligatures<br>`cyriform-ligatures` | Off | Enable contextual and discretionary ligatures supported by the chosen code font. |
 | First-line paragraph indent<br>`cyriform-prose-indent` | Off | Indent ordinary paragraphs in Reading view; opening paragraphs stay aligned. |
-| Emphasis treatment<br>`cyriform-emphasis` | Ink and weight | Use typographic weight or add the knowledge colour to strong text. Choices: Ink and weight, Gold emphasis. |
+| Emphasis treatment<br>`cyriform-emphasis` | Ink and weight | Keep bold text in the text colour or give it a gold accent. Choose Ink and weight or Gold emphasis. |
 ## Heading hierarchy
 
 | Setting | Default | Behaviour and accepted values |
 | --- | --- | --- |
-| Heading colour system<br>`cyriform-heading-colour` | Bone and ink | Preserve the editorial hierarchy or choose a deliberate colour treatment. Choices: Bone and ink, Interaction accent, Custom by level. |
-| Heading rule<br>`cyriform-heading-rule` | Editorial rules | Editorial rules combine the short signal line with the structural rule. Choices: Editorial rules, Fine rules, Open spacing. |
-| Heading level labels<br>`cyriform-heading-labels` | Off | Show H1 to H6 markers beside headings using a compact editorial label. |
+| Heading colour system<br>`cyriform-heading-colour` | Bone and ink | Use the text colour, the accent colour or a separate colour for each heading level. Choose Bone and ink, Interaction accent or Custom by level. |
+| Heading rule<br>`cyriform-heading-rule` | Editorial rules | Choose a short coloured line with a longer divider, a fine divider or open spacing. The choices are Editorial rules, Fine rules and Open spacing. |
+| Heading level labels<br>`cyriform-heading-labels` | Off | Show compact H1 to H6 labels beside rendered headings in Reading view. Editor headings keep their usual layout. |
 | H1 size<br>`cyriform-h1-size` | `2.2em` | Size of level 1 headings in reading and editing. Range: 0.8–3.5em; step 0.05. |
 | H1 weight<br>`cyriform-h1-weight` | `600` | Weight of level 1 headings. Range: 400–800; step 50. |
 | H1 custom colour<br>`cyriform-h1-colour` | Light `#24262B`; dark `#E8E3D9` | Used by the Custom by level heading system. |
@@ -57,44 +57,44 @@ Style Settings exposes the following 89 controls. The theme supplies the same de
 | H6 size<br>`cyriform-h6-size` | `1em` | Size of level 6 headings in reading and editing. Range: 0.8–3.5em; step 0.05. |
 | H6 weight<br>`cyriform-h6-weight` | `650` | Weight of level 6 headings. Range: 400–800; step 50. |
 | H6 custom colour<br>`cyriform-h6-colour` | Light `#24262B`; dark `#E8E3D9` | Used by the Custom by level heading system. |
-## Layout and geometry
+## Page layout and workspace
 
 | Setting | Default | Behaviour and accepted values |
 | --- | --- | --- |
 | Reading measure<br>`cyriform-measure` | `70ch` | Maximum prose width. Per-note widths remain available. Range: 45–100ch; step 1. |
-| Document gutter<br>`cyriform-gutter` | `36px` | Horizontal breathing space around the document. Range: 16–80px; step 2. |
+| Document gutter<br>`cyriform-gutter` | `36px` | Space on either side of the note. Range: 16–80px; step 2. |
 | Document vertical space<br>`cyriform-vertical-space` | `36px` | Space above and below the editing surface. Range: 12–100px; step 4. |
 | List indentation<br>`cyriform-indent` | `2em` | Nested list indentation. Range: 1.2–3.5em; step 0.1. |
-| Control corner radius<br>`cyriform-radius` | `3px` | Small, precise corners across the interface. Range: 0–12px; step 1. |
-| Structural line width<br>`cyriform-border-width` | `1px` | Width of structural surface borders. Range: 0–2px; step 0.5. |
+| Control corner radius<br>`cyriform-radius` | `3px` | How rounded the corners of interface controls are. Range: 0–12px; step 1. |
+| Structural line width<br>`cyriform-border-width` | `1px` | The thickness of interface borders. Range: 0–2px; step 0.5. |
 | Scrollbar width<br>`cyriform-scrollbar` | `8px` | Width of desktop scrollbars. Range: 4–16px; step 1. |
-| Workspace density<br>`cyriform-density` | Standard | Adjust the rhythm of navigation and property rows. Choices: Standard, Compact, Spacious. |
-| Overlay material<br>`cyriform-surface` | Solid | Transient menus can use a restrained translucent surface. Accessibility preferences retain solid surfaces. Choices: Solid, Translucent. |
-| Document ground<br>`cyriform-texture` | Plain | Choose a subtle writing texture with a stable solid fallback. Choices: Plain, Ruled, Dotted. |
+| Workspace density<br>`cyriform-density` | Standard | Change the space between navigation and property rows. Choose Standard, Compact or Spacious. |
+| Overlay material<br>`cyriform-surface` | Solid | Use Solid or Translucent backgrounds for menus. System preferences for reduced transparency keep them solid. |
+| Document ground<br>`cyriform-texture` | Plain | Choose a Plain page background or add Ruled lines or Dotted guides. |
 | Pane dividing lines<br>`cyriform-pane-lines` | Off | Add fine boundaries between workspace panes. |
 | File tree guides<br>`cyriform-tree-guides` | Off | Reveal hierarchy guides beneath file folders. |
 | List guides<br>`cyriform-list-guides` | Off | Reveal indentation guides in nested prose lists. |
 | Focused writing<br>`cyriform-focus-mode` | Off | Emphasise the active editor line while preserving legibility of surrounding text. |
-| Active line surface<br>`cyriform-active-line` | Off | Give the current editor line a quiet raised surface. |
+| Active line surface<br>`cyriform-active-line` | Off | Add a background tint to the current editor line. |
 ## Content treatments
 
 | Setting | Default | Behaviour and accepted values |
 | --- | --- | --- |
-| Callout treatment<br>`cyriform-callout` | Ledger | Use a fine top rule, outlined boundary, tinted field or open annotation. Choices: Ledger, Outline, Tinted plane, Open margin. |
-| Highlight treatment<br>`cyriform-highlight` | Knowledge underline | Choose how marked text carries the knowledge colour. Choices: Knowledge underline, Soft wash, Solid marker. |
-| Tag treatment<br>`cyriform-tags` | Index labels | Semantic tags recognise urgent, blocked, done, reference, idea and related English terms. Choices: Index labels, Semantic states, Outlined labels. |
-| Folder signals<br>`cyriform-folders` | Plain | Add a measured signal to folder depth or recognised workflow names. Choices: Plain, Depth, Semantic names. |
-| Link underline<br>`cyriform-links` | Fine | The interaction colour remains visible for every link treatment. Choices: Fine, On hover, Emphasised. |
+| Callout treatment<br>`cyriform-callout` | Ledger | Choose a line along the top, an outline, a tinted background or open spacing. The choices are Ledger, Outline, Tinted plane and Open margin. |
+| Highlight treatment<br>`cyriform-highlight` | Knowledge underline | Show highlights as an underline, a soft background or a solid fill. Choose Knowledge underline, Soft wash or Solid marker. |
+| Tag treatment<br>`cyriform-tags` | Index labels | Use plain labels, outlines or colours based on tag words such as `urgent`, `done`, `reference` and `idea`. Choose Index labels, Semantic states or Outlined labels. |
+| Folder signals<br>`cyriform-folders` | Plain | Keep folders Plain, colour them by Depth, or use Semantic names to recognise paths containing `Archive`, `Project` and `Reference`. |
+| Link underline<br>`cyriform-links` | Fine | Choose Fine, On hover or Emphasised underlines. Links keep the accent colour. |
 | Unresolved links<br>`cyriform-unresolved` | Dashed | Indicate links whose destination is still to be created. Choices: Dashed, Muted. |
-| Section dividers<br>`cyriform-dividers` | Signal and rule | Divide prose with the theme’s structural line language. Choices: Fine rule, Signal and rule, Double rule. |
+| Section dividers<br>`cyriform-dividers` | Signal and rule | Choose a single line, a line with a short gold segment, or two lines. The choices are Fine rule, Signal and rule and Double rule. |
 | List marker shape<br>`cyriform-list-markers` | By depth | Keep native list layout while varying the drawn marker. Choices: Round, Square, By depth. |
 | Native task appearance<br>`cyriform-native-tasks` | Off | Use the application’s standard checkbox treatment. |
 | Wrap code blocks<br>`cyriform-wrap-code` | Off | Wrap long code lines within their container. |
 | Full-width tables<br>`cyriform-table-wide` | Off | Allow tables to use the available document width. |
-| Table row bands<br>`cyriform-table-stripes` | Off | Add a quiet alternating surface to table rows. |
+| Table row bands<br>`cyriform-table-stripes` | Off | Give alternating table rows a background tint. |
 | Table cell grid<br>`cyriform-table-grid` | Off | Add fine borders around all table cells. |
 | Scrollable diagrams<br>`cyriform-diagram-scroll` | Off | Keep wide Mermaid diagrams and equations in a horizontally scrollable region. |
-| Compact properties<br>`cyriform-properties-compact` | Off | Reduce vertical space in the property ledger. |
+| Compact properties<br>`cyriform-properties-compact` | Off | Reduce the space between property rows. |
 ## Images and embedded content
 
 | Setting | Default | Behaviour and accepted values |
@@ -103,14 +103,14 @@ Style Settings exposes the following 89 controls. The theme supplies the same de
 | Maximum image width<br>`cyriform-image-width` | `100%` | Maximum width of ordinary images. Range: 40–100%; step 5. |
 | Banner image height<br>`cyriform-banner-height` | `260px` | Height for images with the cyriform-banner layout token. Range: 120–500px; step 10. |
 | Embed maximum height<br>`cyriform-embed-height` | `600px` | Scrollable maximum height for embedded notes. Range: 200–1200px; step 20. |
-| Image depth<br>`cyriform-image-shadow` | Off | Add a restrained offset shadow beneath note images. |
-| Open embeds<br>`cyriform-embed-open` | Off | Use an open ruled treatment for embedded notes. |
+| Image depth<br>`cyriform-image-shadow` | Off | Add a small shadow beneath images. |
+| Open embeds<br>`cyriform-embed-open` | Off | Give embedded notes a top and bottom line in place of a full border. |
 ## Motion and mobile
 
 | Setting | Default | Behaviour and accepted values |
 | --- | --- | --- |
-| Motion<br>`cyriform-motion` | Subtle | A brief settling motion accompanies transient layers. System reduced-motion preferences always apply. Choices: Subtle, Still. |
-| Settling duration<br>`cyriform-motion-duration` | `160ms` | Duration of the transient-layer settling motion. Range: 80–300ms; step 10. |
+| Motion<br>`cyriform-motion` | Subtle | Choose a Subtle arrival animation for menus and prompts, or keep them Still. System preferences for reduced motion always apply. |
+| Settling duration<br>`cyriform-motion-duration` | `160ms` | How long the menu and prompt animation lasts. Range: 80–300ms; step 10. |
 | Mobile control size<br>`cyriform-touch-size` | `44px` | Minimum target height for mobile controls. Range: 44–56px; step 2. |
 | Compact mobile reading<br>`cyriform-mobile-dense` | Off | Reduce page gutters while keeping the touch target size. |
 | Show mobile ribbon<br>`cyriform-mobile-ribbon` | Off | Keep the native mobile ribbon available within its application layout. |
